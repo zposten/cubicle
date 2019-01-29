@@ -1,17 +1,16 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-import {Header} from '../components/Header'
+import {Layout} from '../components/Layout'
 
 const Index = () => (
-  <div>
-    <Header />
+  <Layout>
     <Title>
       Hello Zach
     </Title>
     <Link href='/about'>
       <button>About me</button>
     </Link>
-  </div>
+  </Layout>
 )
 
 const Title = styled.h1`
