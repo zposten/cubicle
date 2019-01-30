@@ -1,11 +1,26 @@
-import {withRouter} from 'next/router'
+import React from 'react'
+import fetch from 'isomorphic-unfetch'
+
 import {Layout} from '../components/Layout'
 
-const Page = (props) => (
-  <Layout>
-    <h1>{props.router.query.title}</h1>
-    <p>This is the blog post content.</p>
-  </Layout>
-)
+export default class Page extends React.Component {
+  static async getInitialProps(context) {
+    const {id} = context.query
+    const res = await fetch('https://api.tvmaze.com/shows/' + id)
 
-export default withRouter(Page)
+    const show = await res.json()
+    console.log('Fetched show: ', show.name)
+
+    return {show}
+  }
+
+  render() {
+    return (
+      <Layout>
+        <h1>{this.props.show.name}</h1>
+        <p>{this.props.show.summary.replace(/<[/]?p>/g, '')}</p>
+        <img src={this.props.show.image.medium} />
+      </Layout>
+    )
+  }
+}
