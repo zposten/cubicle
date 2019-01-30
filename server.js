@@ -1,9 +1,12 @@
 const express = require('express')
 const next = require('next')
 
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
+const isDev = process.env.NODE_ENV !== 'production'
+const app = next({dev: isDev})
 const handle = app.getRequestHandler()
+
+const mode = isDev ? 'development' : 'production'
+console.log(`> Running a ${mode} build`)
 
 app
   .prepare()

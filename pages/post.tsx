@@ -2,9 +2,15 @@ import React from 'react'
 import fetch from 'isomorphic-unfetch'
 
 import {Layout} from '../components/Layout'
+import {IShow} from '../models/IShow'
+import {NextContext} from 'next'
 
-export default class Page extends React.Component {
-  static async getInitialProps(context) {
+export type PageProps = {
+  show: IShow,
+}
+
+export default class Page extends React.Component<PageProps, {}> {
+  static async getInitialProps(context: NextContext) {
     const {id} = context.query
     const res = await fetch('https://api.tvmaze.com/shows/' + id)
 
