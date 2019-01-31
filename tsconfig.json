@@ -17,6 +17,6 @@
     "strict": true,
     "target": "esnext"
   },
-  "include": ["pages", "components", "models"],
-  "exclude": ["node_modules"]
+  "include": ["pages", "components", "models", "types"],
+  "exclude": ["node_modules"],
 }

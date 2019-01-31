@@ -3,6 +3,8 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import fetch from 'isomorphic-unfetch'
 
+import {FormField, TextInput, Button} from 'grommet'
+
 import {Layout} from '../components/Layout'
 import {IShow} from '../models/IShow'
 
@@ -38,6 +40,17 @@ export default class Index extends React.Component<IndexProps, {}> {
             ))
           }
         </ul>
+        <br/>
+        <Button color='primary' label='Kiermo is cute' />
+        <FormField
+          label='Street'
+          htmlFor='street-input'
+        >
+          <TextInput
+            id='street-input'
+            placeholder='Enter your street'
+          />
+        </FormField>
       </Layout>
     )
   }
