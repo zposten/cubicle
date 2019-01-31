@@ -6,6 +6,8 @@ import fetch from 'isomorphic-unfetch'
 import {FormField, TextInput, Button} from 'grommet'
 
 import {Layout} from '../components/Layout'
+import {Navigation} from '../components/Navigation'
+import { Jumbotron } from '../components/Jumbotron';
 
 export default class Index extends React.Component {
 
@@ -20,6 +22,8 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <Navigation />
+        <Jumbotron />
         <Title>Batman TV Shows</Title>
         <ul>
           {

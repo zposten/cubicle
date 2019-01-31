@@ -1,3 +1,9 @@
+export const primary = '#1f2833'
+export const primaryDark = '#0b0c10'
+export const secondary = '#67fcf1' //'#66fcf1'
+export const secondaryDark = '#45a29e'
+export const neutral = '#c5c6c7'
+
 export const theme = {
   global: {
     font: {
@@ -7,11 +13,12 @@ export const theme = {
     },
     colors: {
       'light-2': '#f5f5f5',
-      'dark-1': '#1f2833',
+      'dark-1': primary,
       text: {
-        'light': 'rgba(0, 0, 0, 0.87)',
+        'light': primaryDark,
+        'dark': 'white',
       },
-      primary: '#66FCF1',
+      primary: secondary,
     },
     edgeSize: {
       small: '14px',
