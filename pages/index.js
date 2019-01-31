@@ -7,7 +7,8 @@ import {FormField, TextInput, Button} from 'grommet'
 
 import {Layout} from '../components/Layout'
 import {Navigation} from '../components/Navigation'
-import { Jumbotron } from '../components/Jumbotron';
+import {Jumbotron} from '../components/Jumbotron'
+import {MiniProfile} from '../components/MiniProfile'
 
 export default class Index extends React.Component {
 
@@ -24,6 +25,7 @@ export default class Index extends React.Component {
       <Layout>
         <Navigation />
         <Jumbotron />
+        <MiniProfile />
         <Title>Batman TV Shows</Title>
         <ul>
           {

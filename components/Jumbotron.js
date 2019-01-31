@@ -1,13 +1,15 @@
-import styled from "styled-components"
+import styled from 'styled-components'
+
+const DropShadow = styled.div`
+  filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.5));
+`
 
 const Wrapper = styled.div`
-  height: 500px;
+  height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: -20px;
-  margin-bottom: 0;
   background-image: radial-gradient(circle, #67fcf1 20%, #4ca29f 80%);
   clip-path: polygon(
     0 0, /* left top */
@@ -15,10 +17,11 @@ const Wrapper = styled.div`
     100% calc(100% - 6vw), /* right bottom */
     0 100% /* left bottom */
   );
+  box-shadow: 20px 20px;
 `
 
 const Cube = styled.img`
-  width: 300px;
+  width: 600px;
   position: relative;
 `
 
@@ -49,13 +52,14 @@ const SmallText = styled.div`
 `
 
 export const Jumbotron = () => (
-  <Wrapper>
-    <Cube src='/static/cube.png' />
-    <Content>
-      <BigText>ZACH POSTEN</BigText>
-      <Line />
-      <SmallText>SOFTWARE ENGINEER</SmallText>
-    </Content>
-
-  </Wrapper>
+  <DropShadow>
+    <Wrapper>
+      <Cube src='/static/cube.png' />
+      <Content>
+        <BigText>ZACH POSTEN</BigText>
+        <Line />
+        <SmallText>SOFTWARE ENGINEER</SmallText>
+      </Content>
+    </Wrapper>
+  </DropShadow>
 )

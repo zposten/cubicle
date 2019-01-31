@@ -6,8 +6,8 @@ import {loadFonts} from '../general/fonts'
 import styled from 'styled-components';
 
 const Base = styled(Box)`
-  padding: 20px;
   position: relative;
+  line-height: normal;
 `
 
 export class Layout extends React.Component {
