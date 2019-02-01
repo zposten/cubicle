@@ -1,18 +1,22 @@
 import * as React from 'react'
 import {Grommet, Box} from 'grommet'
 
-import {Header} from './Header'
-import {theme} from './theme'
+import {theme} from '../general/theme'
 import {loadFonts} from '../general/fonts'
+import styled from 'styled-components';
+
+const Base = styled(Box)`
+  position: relative;
+  line-height: normal;
+`
 
 export class Layout extends React.Component {
   render() {
     return (
       <Grommet theme={theme}>
-        <Box background='dark-1' fill={true}>
-          <Header />
+        <Base background='dark-1' fill={true}>
           {this.props.children}
-        </Box>
+        </Base>
       </Grommet>
     )
   }

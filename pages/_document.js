@@ -1,6 +1,6 @@
-import Document, { Head, Main, NextScript } from 'next/document';
-// Import styled components ServerStyleSheet
-import { ServerStyleSheet } from 'styled-components';
+import Document, {Head, Main, NextScript} from 'next/document'
+import {ServerStyleSheet} from 'styled-components'
+import {primary} from '../general/theme'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -28,6 +28,7 @@ export default class MyDocument extends Document {
           <style global>{`
             body { 
               margin: 0;
+              background: ${primary};
             }
           `}</style>
         </Head>
