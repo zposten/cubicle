@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 
   ${breakpoint('lg')`
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 600px;
+    grid-template-columns: 1fr 650px;
     grid-template-areas: "bio pic";
   `}
 `
@@ -34,12 +34,12 @@ const Bio = styled.div`
 
   ${breakpoint('xl')`
     padding: 100px;
+    padding-bottom: 0;
   `}
 `
 
-const BioText = styled.div`
+const BioText = styled.h3`
   color: ${primaryDark};
-  font-size: 1.2rem;
   line-height: normal;
 `
 

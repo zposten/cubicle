@@ -25,16 +25,14 @@ const ProjectImage = styled.img`
   width: 200px;
 `
 
-const ProjectTitle = styled.div`
-  font-size: 1.2rem;
+const ProjectTitle = styled.h3`
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
 `
 
-const ProjectDescription = styled.div`
-  font-size: 1rem;
+const ProjectDescription = styled.p`
   text-align: center;
 `
 

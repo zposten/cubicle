@@ -15,8 +15,6 @@ export const theme = {
   global: {
     font: {
       family: 'Roboto',
-      size: '14px',
-      height: '20px',
     },
     colors: {
       'light-2': '#f5f5f5',

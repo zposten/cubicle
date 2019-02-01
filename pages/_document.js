@@ -1,6 +1,8 @@
-import Document, {Head, Main, NextScript} from 'next/document'
+import Document, {Main, Head, NextScript} from 'next/document'
 import {ServerStyleSheet} from 'styled-components'
-import {primary} from '../general/theme'
+
+import {cssFontSizes} from '../general/cssFontSizes'
+import {globalStyles} from '../general/globalStyles'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -22,15 +24,12 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html>
+        {/* Step 5: Output the styles in the head  */}
         <Head>
-          {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
-          <style global>{`
-            body { 
-              margin: 0;
-              background: ${primary};
-            }
-          `}</style>
+          {cssFontSizes}
+          {globalStyles}
+          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         </Head>
         <body>
           <Main />

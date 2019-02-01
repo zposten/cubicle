@@ -1,9 +1,10 @@
 import * as React from 'react'
 import {Grommet, Box} from 'grommet'
+import styled from 'styled-components';
+import breakpoint from 'styled-components-breakpoint'
 
 import {theme} from '../general/theme'
 import {loadFonts} from '../general/fonts'
-import styled from 'styled-components';
 
 const Base = styled(Box)`
   position: relative;
@@ -14,7 +15,7 @@ export class Layout extends React.Component {
   render() {
     return (
       <Grommet theme={theme}>
-        <Base background='dark-1' fill={true}>
+        <Base background='dark-1' fill={true} id='page'>
           {this.props.children}
         </Base>
       </Grommet>

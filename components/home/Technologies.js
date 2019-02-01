@@ -19,10 +19,9 @@ const Blocks = styled.div`
   width: 100%;
 `
 
-const BoldText = styled.div`
+const BoldText = styled.h4`
   font-family: 'Anton';
   margin-right: 10px;
-  font-size: 1.3rem;
 `
 
 const BuildBlock = styled.div`

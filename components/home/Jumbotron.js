@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
+
 import {secondary, secondaryDark} from '../../general/theme'
 
 const DropShadow = styled.div`
@@ -7,6 +9,7 @@ const DropShadow = styled.div`
 
 const Wrapper = styled.div`
   height: 800px;
+  max-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,8 +26,12 @@ const Wrapper = styled.div`
 
 const Cube = styled.img`
   max-width: 600px;
-  width: 66vw;
+  width: 90vw;
   position: relative;
+
+  ${breakpoint('sm')`
+    width: 66vw;
+  `}
 `
 
 const Content = styled.div`
@@ -35,9 +42,8 @@ const Content = styled.div`
   align-items: center;
 `
 
-const BigText = styled.div`
+const BigText = styled.h1`
   font-family: 'Anton';
-  font-size: 3rem;
   line-height: normal;
   margin-bottom: 10px;
 `
