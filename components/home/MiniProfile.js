@@ -23,7 +23,6 @@ const Wrapper = styled.div`
 
 const Bio = styled.div`
   background: white;
-  ${'' /* padding-top: calc(6vw + 20px); */}
   display: flex;
   flex-direction: column;
   justify-content: center;

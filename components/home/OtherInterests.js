@@ -5,11 +5,16 @@ import {TitleBlock} from './TitleBlock'
 import {primaryDark, secondary, primary} from '../../general/theme'
 
 const Wrapper = styled.div`
-  padding: 50px 100px 200px 100px;
+  padding: 50px 30px 200px 30px;
   background: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  ${breakpoint('md')`
+    margin-left: 100px;
+    margin-right: 100px;
+  `}
 `
 
 const Text = styled.p`
