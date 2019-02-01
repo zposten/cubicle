@@ -1,11 +1,11 @@
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
+
 import {TitleBlock} from './TitleBlock'
 import {primaryDark, secondary, primary} from '../../general/theme'
 
 const Wrapper = styled.div`
-  padding: 40px;
-  padding-top: 50px;
-  padding-bottom: 200px;
+  padding: 50px 100px 200px 100px;
   background: white;
   display: flex;
   flex-direction: column;
@@ -14,9 +14,12 @@ const Wrapper = styled.div`
 
 const Text = styled.p`
   color: ${primaryDark};
-  font-size: 1.1rem;
-  margin: 100px;
-  margin-top: 20px;
+  margin-bottom: 30px;
+
+  ${breakpoint('md')`
+    margin: 100px;
+    margin-top: 20px;
+  `}
 `
 
 const Grid = styled.div`
@@ -44,7 +47,7 @@ export const OtherInterests = () => (
     <Grid>
       {
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => (
-          <GridSquare />
+          <GridSquare key={i} />
         ))
       }
     </Grid>

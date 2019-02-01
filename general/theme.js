@@ -5,11 +5,16 @@ export const secondaryDark = '#4ca29f'
 export const neutral = '#c5c6c7'
 
 export const theme = {
+  breakpoints: { 
+    xs: 0,
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200
+  },
   global: {
     font: {
       family: 'Roboto',
-      size: '14px',
-      height: '20px',
     },
     colors: {
       'light-2': '#f5f5f5',
