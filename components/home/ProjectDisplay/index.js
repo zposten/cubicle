@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
 import {Button} from 'grommet'
 
 import {ProjectSummary} from './ProjectSummary'
@@ -13,10 +14,16 @@ const Wrapper = styled.div`
 `
 
 const Summaries = styled.div`
-  display: flex;
   width: 100%;
+  display: flex;
+
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+  ${breakpoint('lg')`
+    flex-direction: row;
+  `}
 `
 
 const ResumeButton = styled(Button)`
