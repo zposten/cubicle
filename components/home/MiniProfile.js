@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import {primary, primaryDark} from '../general/theme'
+import {primary, primaryDark} from '../../general/theme'
+import {TitleBlock} from './TitleBlock';
 
 const Wrapper = styled.div`
   display: grid;
@@ -19,15 +20,6 @@ const Bio = styled.div`
   align-items: flex-start;
 `
 
-const BioHeader = styled.div`
-  background: ${primary};
-  font-family: 'Anton';
-  color: white;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 1.7rem;
-`
-
 const BioText = styled.div`
   color: ${primaryDark};
   font-size: 1.2rem;
@@ -41,7 +33,7 @@ const ProfilePic = styled.img`
 export const MiniProfile = () => (
   <Wrapper>
     <Bio>
-      <BioHeader>A PROFESSIONAL PROBLEM SOLVER</BioHeader>
+      <TitleBlock>A professional problem solver</TitleBlock>
       <BioText>
         I am a software engineer by trade, but at my core, I am a problem solver.
         I love puzzles in all forms and I am constantly looking for new challenges. 

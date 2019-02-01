@@ -1,14 +1,15 @@
 import React from 'react'
-import Link from 'next/link'
 import styled from 'styled-components'
 import fetch from 'isomorphic-unfetch'
 
-import {FormField, TextInput, Button} from 'grommet'
-
-import {Layout} from '../components/Layout'
-import {Navigation} from '../components/Navigation'
-import {Jumbotron} from '../components/Jumbotron'
-import {MiniProfile} from '../components/MiniProfile'
+import {Layout, Navigation} from '../components'
+import {
+  Jumbotron,
+  MiniProfile,
+  ProjectDisplay,
+  Technologies,
+  OtherInterests,
+} from '../components/home'
 
 export default class Index extends React.Component {
 
@@ -26,32 +27,9 @@ export default class Index extends React.Component {
         <Navigation />
         <Jumbotron />
         <MiniProfile />
-        <Title>Batman TV Shows</Title>
-        <ul>
-          {
-            this.props.shows.map(show => (
-              <li key={show.id}>
-                <Link
-                  href={`/post?id=${show.id}`}
-                  as={`/p/${show.id}`}
-                >
-                  <a>{show.name}</a>
-                </Link>
-              </li>
-            ))
-          }
-        </ul>
-        <br/>
-        <Button color='primary' label='Kiermo is cute' />
-        <FormField
-          label='Street'
-          htmlFor='street-input'
-        >
-          <TextInput
-            id='street-input'
-            placeholder='Enter your street'
-          />
-        </FormField>
+        <ProjectDisplay />
+        <Technologies />
+        <OtherInterests />
       </Layout>
     )
   }

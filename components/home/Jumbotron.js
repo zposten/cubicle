@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {secondary, secondaryDark} from '../../general/theme'
 
 const DropShadow = styled.div`
   filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.5));
@@ -10,7 +11,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  background-image: radial-gradient(circle, #67fcf1 20%, #4ca29f 80%);
+  background-image: radial-gradient(circle, ${secondary} 20%, ${secondaryDark} 80%);
   clip-path: polygon(
     0 0, /* left top */
     100% 0, /* right top */ 
