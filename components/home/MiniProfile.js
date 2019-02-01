@@ -1,23 +1,40 @@
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
+
 import {primary, primaryDark} from '../../general/theme'
-import {TitleBlock} from './TitleBlock';
+import {TitleBlock} from './TitleBlock'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr auto;
   margin-top: -6vw;
   background: white;
-  ${'' /* margin-bottom: 12vw; */}
+
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "pic"
+    "bio";
+
+  ${breakpoint('lg')`
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 600px;
+    grid-template-areas: "bio pic";
+  `}
 `
 
 const Bio = styled.div`
   background: white;
-  padding: 100px;
-  padding-top: calc(6vw + 20px);
+  ${'' /* padding-top: calc(6vw + 20px); */}
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  grid-area: bio;
+
+  padding: 100px 30px;
+
+  ${breakpoint('xl')`
+    padding: 100px;
+  `}
 `
 
 const BioText = styled.div`
@@ -27,7 +44,9 @@ const BioText = styled.div`
 `
 
 const ProfilePic = styled.img`
-  width: 600px;
+  width: 100%;
+  grid-row: 1 / 2;
+  grid-area: pic;
 `
 
 export const MiniProfile = () => (

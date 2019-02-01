@@ -22,7 +22,8 @@ const Wrapper = styled.div`
 `
 
 const Cube = styled.img`
-  width: 600px;
+  max-width: 600px;
+  width: 66vw;
   position: relative;
 `
 
