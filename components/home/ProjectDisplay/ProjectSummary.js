@@ -8,12 +8,15 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  ${breakpoint('sm')`
+  margin-top: 50px;
+
+  ${breakpoint('md')`
     max-width: 66%;
   `}
 
   ${breakpoint('lg')`
     max-width: 400px;
+    margin-top: 20px;
   `}
 `
 

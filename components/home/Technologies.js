@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
+
 import {primary, secondary, secondaryDark} from '../../general/theme'
 
 
@@ -13,6 +15,8 @@ const Blocks = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
 `
 
 const BoldText = styled.div`
@@ -22,14 +26,18 @@ const BoldText = styled.div`
 `
 
 const BuildBlock = styled.div`
-  margin: 10px;
+  margin: 20px;
   background: ${primary};
-  margin-left: ${props => props.left + 20 || 20}px;
   display: flex;
   padding: 10px;
   height: 40px;
-  width: 700px;
+  width: 80%;
+  max-width: 700px;
   align-items: center;
+
+  ${breakpoint('lg')`
+    margin-left: ${props => props.left + 20 || 20}px;
+  `}
 `
 
 export const Technologies = () => (
