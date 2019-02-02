@@ -40,6 +40,7 @@ const Bio = styled.div`
 const BioText = styled.h3`
   color: ${primaryDark};
   line-height: normal;
+  font-weight: 300;
 `
 
 const ProfilePic = styled.img`
@@ -56,8 +57,8 @@ export const MiniProfile = () => (
         I am a software engineer by trade, but at my core, I am a problem solver.
         I love puzzles in all forms and I am constantly looking for new challenges. 
         With a Software Engineering degree from MSOE, as well as my experience at 
-        Johnson Controls and as a Software Consultant, I am dedicated to finding
-        solutions and writing effective, beautiful code.
+        Johnson Controls and as a software consultant, I am dedicated to finding
+        effective solutions while writing beautiful code.
       </BioText>
     </Bio>
     <ProfilePic src='/static/zach.jpg'  />

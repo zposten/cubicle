@@ -3,10 +3,9 @@ import breakpoint from 'styled-components-breakpoint'
 
 const Wrapper = styled.div`
   margin: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 200px auto auto;
+  justify-items: center;
 
   margin-top: 50px;
 
@@ -30,10 +29,11 @@ const ProjectTitle = styled.h3`
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
+  text-transform: uppercase;
 `
 
 const ProjectDescription = styled.p`
-  text-align: center;
+  text-align: justify;
 `
 
 export const ProjectSummary = ({src, title, description}) => (

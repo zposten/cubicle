@@ -12,12 +12,12 @@ const Wrapper = styled.div`
   align-items: flex-start;
 
   ${breakpoint('md')`
-    margin-left: 100px;
-    margin-right: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
   `}
 `
 
-const Text = styled.p`
+const Text = styled.div`
   color: ${primaryDark};
   margin-bottom: 30px;
 
@@ -45,9 +45,16 @@ export const OtherInterests = () => (
   <Wrapper>
     <TitleBlock>My other interests</TitleBlock>
     <Text>
-      When not writing code, I enjoy photography, cooking, and spending time with my
-      dog, Lola.  I'm an avid Brewers fan, and love spending time with my super cute 
-      girlfriend who is the very best of the best.
+      <p>
+        When not writing code, I enjoy photography, cooking, and spending time with my
+        dog, Lola.  I'm an avid Brewers fan, and love venturing into the great outdoors
+        whenever possible.  
+      </p>
+      <p>
+        Also, as you might have guessed from my website, I enjoy solving
+        Rubik's cubes...quickly.  I have solved cubes from a 2x2 all the way up to a 7x7, but
+        my fastest remains the standard 3x3 cube, which I have solved in a mere 14 seconds,
+      </p>
     </Text>
     <Grid>
       {

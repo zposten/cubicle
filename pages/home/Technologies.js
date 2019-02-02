@@ -22,6 +22,7 @@ const Blocks = styled.div`
 const BoldText = styled.h4`
   font-family: 'Anton';
   margin-right: 10px;
+  font-weight: 500;
 `
 
 const BuildBlock = styled.div`
@@ -44,15 +45,15 @@ export const Technologies = () => (
     <Blocks>
       <BuildBlock>
         <BoldText>BUILD IN</BoldText>
-        software, program, tool, platform, data catcher
+        JavaScript, TypeScript, C#, Java
       </BuildBlock>
       <BuildBlock left={100}>
         <BoldText>BUILD WITH</BoldText>
-        software, program, tool, platform, data catcher
+        React, Angular, Redux, Webpack, Babel, .NET, UWP
       </BuildBlock>
       <BuildBlock left={200}>
         <BoldText>BUILD FOR</BoldText>
-        software, program, tool, platform, data catcher
+        web, Node, Windows, IoT, Mac, mobile
       </BuildBlock>
     </Blocks>
   </Wrapper>
