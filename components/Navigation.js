@@ -13,14 +13,10 @@ const A = styled.a`
 const Wrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-  ${'' /* background: ${secondary}; */}
-  ${'' /* margin: -20px; */}
-  ${'' /* margin-bottom: 0; */}
-  ${'' /* padding-top: 40px; */}
   position: absolute;
   top: 40px;
   right: 10px;
-  z-index: 9999;
+  z-index: 2;
 `
 
 export const Navigation = () => (

@@ -4,24 +4,33 @@ import breakpoint from 'styled-components-breakpoint'
 const Wrapper = styled.div`
   margin: 20px;
   display: grid;
-  grid-template-rows: 200px auto auto;
+  grid-template-rows: auto auto 1fr;
   justify-items: center;
 
-  margin-top: 50px;
+  margin-top: 100px;
+  width: 75%;
+
+  &:first-child {
+    margin-top: 20px;
+  }
 
   ${breakpoint('md')`
-    max-width: 66%;
+    width: 50%;
   `}
 
   ${breakpoint('lg')`
-    max-width: 400px;
+    width: 400px;
     margin-top: 20px;
   `}
 `
 
 const ProjectImage = styled.img`
   border-radius: 50%;
-  width: 200px;
+  width: 80%;
+
+  ${breakpoint('lg')`
+    width: 200px;
+  `}
 `
 
 const ProjectTitle = styled.h3`
@@ -33,7 +42,11 @@ const ProjectTitle = styled.h3`
 `
 
 const ProjectDescription = styled.p`
-  text-align: justify;
+  text-align: left;
+
+  ${breakpoint('lg')`
+    text-align: justify;
+  `}
 `
 
 export const ProjectSummary = ({src, title, description}) => (

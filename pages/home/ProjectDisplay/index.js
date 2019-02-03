@@ -29,7 +29,7 @@ const Summaries = styled.div`
 
 const ResumeButton = styled(Button)`
   align-items: center;
-  width: 300px;
+  width: 200px;
   margin-top: 100px;
   margin-bottom: 100px;
 `
@@ -67,6 +67,9 @@ export const ProjectDisplay = () => (
         `}
       />
     </Summaries>
-    <ResumeButton color='primary' label='View resume' />
+
+    <a href='/static/resume2019.pdf' download>
+      <ResumeButton color='primary' label='View resume' />
+    </a>
   </Wrapper>
 )
