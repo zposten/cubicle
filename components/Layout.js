@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import {Grommet, Box} from 'grommet'
-import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint'
+import styled from 'styled-components'
 
 import {theme} from 'general/theme'
 import {loadFonts} from 'general/fonts'
@@ -25,4 +25,8 @@ export class Layout extends React.Component {
   componentDidMount() {
     loadFonts()
   }
+}
+
+Layout.propTypes = {
+  children: PropTypes.any.isRequired,
 }

@@ -1,3 +1,5 @@
+import React from 'react'
+
 // Taken from: http://typecast.com/blog/a-more-modern-scale-for-web-typography
 
 export const cssFontSizes = <style global>{`

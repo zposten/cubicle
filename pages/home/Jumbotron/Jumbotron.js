@@ -1,11 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 import {secondary, secondaryDark} from 'general/theme'
 import {GithubIcon, TwitterIcon, LinkedInIcon} from 'general/socialNetworkIcons'
 import {NeonText} from './NeonText'
-
 
 
 const DropShadow = styled.div`
@@ -74,6 +74,12 @@ const SocialLink = (props) => {
       {props.children}
     </Link>
   )
+}
+
+SocialLink.propTypes = {
+  last: PropTypes.bool,
+  href: PropTypes.string.isRequired,
+  children: PropTypes.any,
 }
 
 const Socials = styled.div`

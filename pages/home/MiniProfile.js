@@ -1,7 +1,8 @@
+import React from 'react'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import {primary, primaryDark} from 'general/theme'
+import {primaryDark} from 'general/theme'
 import {TitleBlock} from './TitleBlock'
 
 const Wrapper = styled.div`
@@ -55,8 +56,8 @@ export const MiniProfile = () => (
       <TitleBlock>A professional problem solver</TitleBlock>
       <BioText>
         I am a software engineer by trade, but at my core, I am a problem solver.
-        I love puzzles in all forms and I am constantly looking for new challenges. 
-        With a Software Engineering degree from MSOE, as well as my experience at 
+        I love puzzles in all forms and I am constantly looking for new challenges.
+        With a Software Engineering degree from MSOE, as well as my experience at
         Johnson Controls and as a software consultant, I am dedicated to finding
         effective solutions while writing beautiful code.
       </BioText>

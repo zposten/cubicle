@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
@@ -57,3 +59,10 @@ export const ProjectSummary = ({src, title, description, invert}) => (
     <ProjectDescription>{description}</ProjectDescription>
   </Wrapper>
 )
+
+ProjectSummary.propTypes = {
+  src: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.any,
+  invert: PropTypes.bool,
+}

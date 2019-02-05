@@ -1,8 +1,9 @@
+import React from 'react'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 import {TitleBlock} from './TitleBlock'
-import {primaryDark, secondary, primary} from 'general/theme'
+import {primaryDark, secondary} from 'general/theme'
 
 const Wrapper = styled.div`
   padding: 50px 30px 200px 30px;
@@ -48,7 +49,7 @@ export const OtherInterests = () => (
       <p>
         When not writing code, I enjoy photography, cooking, and spending time with my
         dog, Lola.  I'm an avid Brewers fan, and love venturing into the great outdoors
-        whenever possible.  
+        whenever possible.
       </p>
       <p>
         Also, as you might have guessed from my website, I enjoy solving
