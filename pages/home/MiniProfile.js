@@ -1,7 +1,8 @@
+import React from 'react'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import {primary, primaryDark} from '../../general/theme'
+import {primaryDark} from 'general/theme'
 import {TitleBlock} from './TitleBlock'
 
 const Wrapper = styled.div`
@@ -23,7 +24,6 @@ const Wrapper = styled.div`
 
 const Bio = styled.div`
   background: white;
-  ${'' /* padding-top: calc(6vw + 20px); */}
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,6 +41,7 @@ const Bio = styled.div`
 const BioText = styled.h3`
   color: ${primaryDark};
   line-height: normal;
+  font-weight: 300;
 `
 
 const ProfilePic = styled.img`
@@ -55,10 +56,10 @@ export const MiniProfile = () => (
       <TitleBlock>A professional problem solver</TitleBlock>
       <BioText>
         I am a software engineer by trade, but at my core, I am a problem solver.
-        I love puzzles in all forms and I am constantly looking for new challenges. 
-        With a Software Engineering degree from MSOE, as well as my experience at 
-        Johnson Controls and as a Software Consultant, I am dedicated to finding
-        solutions and writing effective, beautiful code.
+        I love puzzles in all forms and I am constantly looking for new challenges.
+        With a Software Engineering degree from MSOE, as well as my experience at
+        Johnson Controls and as a software consultant, I am dedicated to finding
+        effective solutions while writing beautiful code.
       </BioText>
     </Bio>
     <ProfilePic src='/static/zach.jpg'  />

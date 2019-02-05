@@ -5,7 +5,7 @@ export const secondaryDark = '#4ca29f'
 export const neutral = '#c5c6c7'
 
 export const theme = {
-  breakpoints: { 
+  breakpoints: {
     xs: 0,
     sm: 576,
     md: 768,
@@ -50,12 +50,12 @@ export const theme = {
   },
   checkBox: {
     border: {
-      radius: "0px"
+      radius: '0px'
     }
   },
   layer: {
     border: {
-      radius: "0px"
+      radius: '0px'
     }
   }
-};
+}

@@ -1,5 +1,5 @@
-export * from './Jumbotron'
+export * from './Jumbotron/Jumbotron'
 export * from './MiniProfile'
-export * from './ProjectDisplay/index'
+export * from './ProjectDisplay/ProjectDisplay'
 export * from './Technologies'
 export * from './OtherInterests'
