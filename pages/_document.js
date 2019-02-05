@@ -1,8 +1,8 @@
 import Document, {Main, Head, NextScript} from 'next/document'
 import {ServerStyleSheet} from 'styled-components'
 
-import {cssFontSizes} from '../general/cssFontSizes'
-import {GlobalStyles} from '../general/GlobalStyles'
+import {cssFontSizes} from 'general/cssFontSizes'
+import {GlobalStyles} from 'general/GlobalStyles'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {

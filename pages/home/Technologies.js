@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import {primary, secondary, secondaryDark} from '../../general/theme'
+import {primary, secondary, secondaryDark} from 'general/theme'
 
 
 const Wrapper = styled.div`

@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import {secondary, secondaryDark} from '../../../general/theme'
-import {GithubIcon, TwitterIcon, LinkedInIcon} from '../../../general/icons'
+import {secondary, secondaryDark} from 'general/theme'
+import {GithubIcon, TwitterIcon, LinkedInIcon} from 'general/socialNetworkIcons'
 import {NeonText} from './NeonText'
 
 

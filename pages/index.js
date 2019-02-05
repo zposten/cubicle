@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Layout, Navigation} from '../components'
+import {Layout, Navigation} from 'components'
 import {
   Jumbotron,
   MiniProfile,

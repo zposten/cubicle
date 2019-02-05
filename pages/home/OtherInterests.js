@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 import {TitleBlock} from './TitleBlock'
-import {primaryDark, secondary, primary} from '../../general/theme'
+import {primaryDark, secondary, primary} from 'general/theme'
 
 const Wrapper = styled.div`
   padding: 50px 30px 200px 30px;

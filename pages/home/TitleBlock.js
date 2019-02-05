@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {primary} from '../../general/theme'
+import {primary} from 'general/theme'
 
 export const TitleBlock = styled.h2`
   background: ${primary};

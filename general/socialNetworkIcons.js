@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {secondary} from '../general/theme'
+import {secondary} from 'general/theme'
 
 const Icon = styled.svg`
   width: ${props => props.width || props.size || 40}px;

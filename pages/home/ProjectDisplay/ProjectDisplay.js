@@ -3,7 +3,7 @@ import breakpoint from 'styled-components-breakpoint'
 import {Button} from 'grommet'
 
 import {ProjectSummary} from './ProjectSummary'
-import {TitleBlock} from '../TitleBlock'
+import {TitleBlock} from 'components/TitleBlock'
 
 const Wrapper = styled.div`
   margin: 20px;

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
-import {secondary} from '../general/theme'
+import {secondary} from 'general/theme'
 
 const A = styled.a`
   margin-right: 40px;

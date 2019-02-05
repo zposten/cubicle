@@ -3,8 +3,8 @@ import {Grommet, Box} from 'grommet'
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint'
 
-import {theme} from '../general/theme'
-import {loadFonts} from '../general/fonts'
+import {theme} from 'general/theme'
+import {loadFonts} from 'general/fonts'
 
 const Base = styled(Box)`
   position: relative;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import {primary, primaryDark} from '../../general/theme'
+import {primary, primaryDark} from 'general/theme'
 import {TitleBlock} from './TitleBlock'
 
 const Wrapper = styled.div`
