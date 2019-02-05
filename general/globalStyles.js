@@ -1,7 +1,8 @@
-import {primary, secondary, secondaryDark} from '../general/theme'
+import {createGlobalStyle} from 'styled-components'
+import {primary, secondary, secondaryDark} from './theme'
 
-export const globalStyles = (
-  <style global='true'>{`
+
+export const GlobalStyles = createGlobalStyle`
   body { 
     margin: 0;
     background: ${primary};
@@ -9,10 +10,9 @@ export const globalStyles = (
 
   a {
     color: ${secondary};
-  }
 
-  a:visited {
-    color: ${secondaryDark}
+    &:visited {
+      color: ${secondaryDark};
+    }
   }
-  `}</style>
-)
+`

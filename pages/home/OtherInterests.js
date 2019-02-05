@@ -21,7 +21,7 @@ const Text = styled.div`
   color: ${primaryDark};
   margin-bottom: 30px;
 
-  ${breakpoint('md')`
+  ${breakpoint('lg')`
     margin: 100px;
     margin-top: 20px;
   `}

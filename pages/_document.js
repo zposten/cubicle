@@ -2,7 +2,7 @@ import Document, {Main, Head, NextScript} from 'next/document'
 import {ServerStyleSheet} from 'styled-components'
 
 import {cssFontSizes} from '../general/cssFontSizes'
-import {globalStyles} from '../general/globalStyles'
+import {GlobalStyles} from '../general/GlobalStyles'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -28,7 +28,7 @@ export default class MyDocument extends Document {
         <Head>
           {this.props.styleTags}
           {cssFontSizes}
-          {globalStyles}
+          <GlobalStyles global='true' />
           <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         </Head>
         <body>
