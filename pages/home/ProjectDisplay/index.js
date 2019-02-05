@@ -58,17 +58,21 @@ export const ProjectDisplay = () => (
         `}
       />
       <ProjectSummary 
-        src='/static/zach.jpg'
-        title='Songbridge'
-        description={`
-          For my senior design project at MSOE, myself and a team of four others
-          created a music voting Google Chromecast application with a companion
-          mobile app.
-        `}
+        src='/static/github.svg'
+        invert={true}
+        title='Open source contributions'
+        description={<div>
+          I've done a considerable amount of open source work over the years.  I have contributed to notable libraries including &nbsp;
+          <a href='https://github.com/Azure/azure-iot-sdk-csharp'>Microsoft's C# Azure IoT SDK</a>, as well as the prominent &nbsp;
+          <a href='https://github.com/zposten/DefinitelyTyped'>Definitely typed repo</a>.  Additionally, I've published &nbsp;
+          <a href='https://userstyles.org/styles/134244/vsts-dark'>CSS themes</a> that have been &nbsp;
+          <a href='https://userstyles.org/styles/130371/google-calendar-dark-theme'>downloaded thousands of times</a>, as well as a &nbsp;
+          <a href='https://github.com/zposten/catalyst'>React/Typescript starter kit</a>.
+        </div>}
       />
     </Summaries>
 
-    <a href='/static/resume2019.pdf' download>
+    <a href='/static/zach-posten-resume.pdf' download>
       <ResumeButton color='primary' label='View resume' />
     </a>
   </Wrapper>

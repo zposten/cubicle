@@ -27,6 +27,7 @@ const Wrapper = styled.div`
 const ProjectImage = styled.img`
   border-radius: 50%;
   width: 80%;
+  filter: ${props => props.invert ? 'invert(100%)' : null};
 
   ${breakpoint('lg')`
     width: 200px;
@@ -41,7 +42,7 @@ const ProjectTitle = styled.h3`
   text-transform: uppercase;
 `
 
-const ProjectDescription = styled.p`
+const ProjectDescription = styled.div`
   text-align: left;
 
   ${breakpoint('lg')`
@@ -49,9 +50,9 @@ const ProjectDescription = styled.p`
   `}
 `
 
-export const ProjectSummary = ({src, title, description}) => (
+export const ProjectSummary = ({src, title, description, invert}) => (
   <Wrapper>
-    <ProjectImage src={src} />
+    <ProjectImage src={src} invert={invert} />
     <ProjectTitle>{title}</ProjectTitle>
     <ProjectDescription>{description}</ProjectDescription>
   </Wrapper>

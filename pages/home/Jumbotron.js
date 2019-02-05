@@ -1,7 +1,11 @@
+import {useState} from 'react'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 import {secondary, secondaryDark} from '../../general/theme'
+import {GithubIcon} from '../../general/icons'
+
+
 
 const DropShadow = styled.div`
   filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.5));
@@ -28,6 +32,11 @@ const Cube = styled.img`
   max-width: 600px;
   width: 90vw;
   position: relative;
+  transition: filter 0.5s;
+
+  &.hover, &:hover {
+    filter: drop-shadow(10px 10px 50px white);
+  }
 
   ${breakpoint('sm')`
     width: 66vw;
@@ -43,9 +52,58 @@ const Content = styled.div`
 `
 
 const BigText = styled.h1`
-  font-family: 'Anton';
+  font-family: Anton;
   line-height: normal;
   margin-bottom: 10px;
+  font-size: 4em;
+
+  &.hover, &:hover {
+    animation: 
+      neon-start 0.5s ease-in, 
+      neon2 1.5s ease-in-out 0.5s infinite alternate;
+  }
+
+  @keyframes neon-start {
+    from {
+      text-shadow: none;
+    }
+    to {
+      text-shadow: 
+        0 0 10px #fff, 
+        0 0 20px #fff,
+        0 0 30px #fff,
+        0 0 40px ${secondary},
+        0 0 70px ${secondary},
+        0 0 80px ${secondary},
+        0 0 100px ${secondary},
+        0 0 150px ${secondary};
+    }
+  }
+
+  @keyframes neon2 {
+    from {
+      text-shadow: 
+        0 0 10px #fff, 
+        0 0 20px #fff,
+        0 0 30px #fff,
+        0 0 40px ${secondary},
+        0 0 70px ${secondary},
+        0 0 80px ${secondary},
+        0 0 100px ${secondary},
+        0 0 150px ${secondary};
+    }
+    to {
+      text-shadow: 
+        0 0 5px  #fff,
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 20px ${secondary},
+        0 0 35px ${secondary},
+        0 0 40px ${secondary},
+        0 0 50px ${secondary},
+        0 0 75px ${secondary};
+    }
+  }
 `
 
 const Line = styled.div`
@@ -59,15 +117,36 @@ const SmallText = styled.div`
   margin-top: 20px;
 `
 
-export const Jumbotron = () => (
-  <DropShadow>
-    <Wrapper>
-      <Cube src='/static/cube.png' />
-      <Content>
-        <BigText>ZACH POSTEN</BigText>
-        <Line />
-        <SmallText>SOFTWARE ENGINEER</SmallText>
-      </Content>
-    </Wrapper>
-  </DropShadow>
-)
+export function Jumbotron() {
+  const [isHovered, setIsHovered] = useState(false)
+
+  function onMouseEnter() {
+    console.log('onMouseEnter')
+    setIsHovered(true)
+  }
+
+  function onMouseLeave() {
+    console.log('onMouseLeave')
+    setIsHovered(false)
+  }
+
+  return (
+    <DropShadow
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+    >
+      <Wrapper
+      >
+        <Cube src='/static/cube.png' className={isHovered && 'hover'} />
+        <Content>
+          <BigText className={isHovered && 'hover'}>ZACH POSTEN</BigText>
+          <Line />
+          <SmallText>SOFTWARE ENGINEER</SmallText>
+          <div>
+            <GithubIcon />
+          </div>
+        </Content>
+      </Wrapper>
+    </DropShadow>
+  )
+}

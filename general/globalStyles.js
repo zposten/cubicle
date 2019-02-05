@@ -1,4 +1,4 @@
-import {primary} from '../general/theme'
+import {primary, secondary, secondaryDark} from '../general/theme'
 
 export const globalStyles = (
   <style global='true'>{`
@@ -6,5 +6,13 @@ export const globalStyles = (
     margin: 0;
     background: ${primary};
   }
-`}</style>
+
+  a {
+    color: ${secondary};
+  }
+
+  a:visited {
+    color: ${secondaryDark}
+  }
+  `}</style>
 )

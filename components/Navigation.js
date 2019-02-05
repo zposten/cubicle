@@ -8,6 +8,19 @@ const A = styled.a`
   color: blue;
   cursor: pointer;
   color: white;
+
+  &:hover {
+    text-shadow: 
+      0 0 10px #fff, 
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px ${secondary},
+      0 0 70px ${secondary},
+      0 0 80px ${secondary},
+      0 0 100px ${secondary},
+      0 0 150px ${secondary};
+  }
+}
 `
 
 const Wrapper = styled.div`
