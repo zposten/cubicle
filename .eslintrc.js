@@ -5,6 +5,7 @@ module.exports = {
     node: true
   },
   extends: ['eslint:recommended', 'plugin:react/recommended'],
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -16,12 +17,13 @@ module.exports = {
     'react'
   ],
   rules: {
-    indent: ['warn', 2],
+    'indent': ['warn', 2],
     'linebreak-style': ['warn','unix'],
-    quotes: ['warn', 'single'],
-    semi: ['warn', 'never'],
+    'quotes': ['warn', 'single'],
+    'semi': ['warn', 'never'],
     'no-trailing-spaces': ['warn', { ignoreComments: true }],
     'object-curly-spacing': ['warn', 'never'],
     'react/no-unescaped-entities': 'off',
+    'no-console': 'warn',
   }
 };

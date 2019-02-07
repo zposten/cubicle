@@ -3,7 +3,11 @@ import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 import {TitleBlock} from './TitleBlock'
-import {primaryDark, secondary} from 'general/theme'
+import {primaryDark} from 'general/theme'
+
+import slides from 'components/photography/slides-2015'
+import Photoswipe from '@zposten/photoswipe-react'
+
 
 const Wrapper = styled.div`
   padding: 50px 30px 200px 30px;
@@ -28,20 +32,6 @@ const Text = styled.div`
   `}
 `
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(5, 1fr);
-  width: 100%;
-  grid-gap: 10px;
-`
-
-const GridSquare = styled.div`
-  width: 100%;
-  height: 100px;
-  background: ${secondary};
-`
-
 export const OtherInterests = () => (
   <Wrapper>
     <TitleBlock>My other interests</TitleBlock>
@@ -57,12 +47,9 @@ export const OtherInterests = () => (
         my fastest remains the standard 3x3 cube, which I have solved in a mere 14 seconds,
       </p>
     </Text>
-    <Grid>
-      {
-        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => (
-          <GridSquare key={i} />
-        ))
-      }
-    </Grid>
+    <Photoswipe
+      slides={slides}
+      galleryId={0}
+    />
   </Wrapper>
 )
