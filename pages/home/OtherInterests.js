@@ -5,7 +5,9 @@ import breakpoint from 'styled-components-breakpoint'
 import {TitleBlock} from './TitleBlock'
 import {primaryDark} from 'general/theme'
 
-import {slidesByYear, Gallery, LightBox} from 'components/photography'
+import slides from 'components/photography/slides-2015'
+import Photoswipe from '@zposten/photoswipe-react'
+
 
 const Wrapper = styled.div`
   padding: 50px 30px 200px 30px;
@@ -45,7 +47,9 @@ export const OtherInterests = () => (
         my fastest remains the standard 3x3 cube, which I have solved in a mere 14 seconds,
       </p>
     </Text>
-    <Gallery slides={slidesByYear[2015]} gid={0} />
-    <LightBox />
+    <Photoswipe
+      slides={slides}
+      galleryId={0}
+    />
   </Wrapper>
 )
