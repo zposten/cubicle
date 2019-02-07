@@ -885,10 +885,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.1.tgz#5c85d662f76fa1d34575766c5dcd6615abcd30d8"
   integrity sha512-FZdkNBDqBRHKQ2MEbSC17xnPFOhZxeJ2YGSfr2BKf3sujG49Qe3bB+rGCwQfIaA7WHnGeGkSijX4FuBCdrzW/g==
 
-"@zposten/photoswipe-react@^0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@zposten/photoswipe-react/-/photoswipe-react-0.1.18.tgz#0005262185442e1294a548ead0652e805d1b2382"
-  integrity sha512-DTiCaWDbFcK2MdqkOY5Tki8E63e4Hc0wHCvs1Q4eAmVAupCv8FQTmjtnwTtYercg7hmyXlQ/7wCJjt1MX1pbsw==
+"@zposten/photoswipe-react@^0.1.20":
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/@zposten/photoswipe-react/-/photoswipe-react-0.1.20.tgz#dfb68b110c94a05cb812edb5b9da7bbd7fb4be83"
+  integrity sha512-gnVbGZHB2ePc0k/ZR2y6UZ4ttb5z9wre9TPPQiJgxXelnDrcC+3EB2Z7XZbWIoZwCaCnHRzM/eIc0HehKxWfZQ==
   dependencies:
     photoswipe "^4.1.3"
 

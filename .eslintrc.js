@@ -25,5 +25,6 @@ module.exports = {
     'object-curly-spacing': ['warn', 'never'],
     'react/no-unescaped-entities': 'off',
     'no-console': 'warn',
+    'no-unused-vars': 'warn',
   }
 };

@@ -5,7 +5,7 @@ import breakpoint from 'styled-components-breakpoint'
 import {TitleBlock} from './TitleBlock'
 import {primaryDark} from 'general/theme'
 
-import slides from 'components/photography/slides-2015'
+import slides from 'components/photography/slides-featured'
 import Photoswipe from '@zposten/photoswipe-react'
 
 
