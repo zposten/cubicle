@@ -886,9 +886,9 @@
   integrity sha512-FZdkNBDqBRHKQ2MEbSC17xnPFOhZxeJ2YGSfr2BKf3sujG49Qe3bB+rGCwQfIaA7WHnGeGkSijX4FuBCdrzW/g==
 
 "@zposten/photoswipe-react@^0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@zposten/photoswipe-react/-/photoswipe-react-0.1.20.tgz#dfb68b110c94a05cb812edb5b9da7bbd7fb4be83"
-  integrity sha512-gnVbGZHB2ePc0k/ZR2y6UZ4ttb5z9wre9TPPQiJgxXelnDrcC+3EB2Z7XZbWIoZwCaCnHRzM/eIc0HehKxWfZQ==
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/@zposten/photoswipe-react/-/photoswipe-react-0.1.21.tgz#fba5d96b4c0bba1978466d23b1e0b146c2bb03c3"
+  integrity sha512-i8dZRgoILIvyjUa9+eBWeF/KW+aiMPKotSEEh46hKpdGqFeuKlOlxIcuEsFe3Mwd64zar4bNkFXngMHFQ8ME7w==
   dependencies:
     photoswipe "^4.1.3"
 
@@ -4155,7 +4155,7 @@ pkg-dir@^3.0.0:
   dependencies:
     find-up "^3.0.0"
 
-polished@^2.2.0:
+polished@^2.2.0, polished@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/polished/-/polished-2.3.3.tgz#bdbaba962ba8271b0e11aa287f2befd4c87be99a"
   integrity sha512-59V4fDbdxtH4I1m9TWxFsoGJbC8nnOpUYo5uFmvMfKp9Qh+6suo4VMUle1TGIIUZIGxfkW+Rs485zPk0wcwR2Q==

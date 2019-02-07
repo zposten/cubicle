@@ -6,6 +6,7 @@ export const globalStyles = (
     body { 
       margin: 0;
       background: ${primary};
+      font-family: Roboto, Arial;
     }
 
     a {

@@ -14,7 +14,7 @@ const startShadow = css`
 `
 
 export const NeonText = styled.h1`
-  font-family: Anton;
+  font-family: Anton, Arial;
   line-height: normal;
   margin-bottom: 10px;
   font-size: 4em;
