@@ -14,7 +14,7 @@ export const theme = {
   },
   global: {
     font: {
-      family: 'Roboto',
+      family: 'Roboto, Arial',
     },
     colors: {
       'light-2': '#f5f5f5',

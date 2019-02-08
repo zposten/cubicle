@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: Roboto, Arial;
 `
 
 const CardColumn = styled.div`

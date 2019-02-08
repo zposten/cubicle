@@ -21,7 +21,7 @@ const Blocks = styled.div`
 `
 
 const BoldText = styled.h4`
-  font-family: 'Anton';
+  font-family: Anton, Arial;
   margin-right: 10px;
   font-weight: 500;
 `

@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 `
 
 const BigText = styled.h1`
-  font-family: Anton;
+  font-family: Anton, Arial;
   color: ${secondary};
   text-transform: uppercase;
   margin: 0;
