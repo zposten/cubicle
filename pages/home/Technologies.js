@@ -4,7 +4,6 @@ import breakpoint from 'styled-components-breakpoint'
 
 import {primary, secondary, secondaryDark} from 'general/theme'
 
-
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -18,6 +17,11 @@ const Blocks = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+
+  ${breakpoint('lg')`
+    width: auto;
+    align-items: flex-start;
+  `}
 `
 
 const BoldText = styled.h4`
@@ -31,12 +35,13 @@ const BuildBlock = styled.div`
   background: ${primary};
   display: flex;
   padding: 10px;
-  height: 40px;
+  height: 60px;
   width: 80%;
   max-width: 700px;
   align-items: center;
 
   ${breakpoint('lg')`
+    width: 700px;
     margin-left: ${props => props.left + 20 || 20}px;
   `}
 `
@@ -48,11 +53,11 @@ export const Technologies = () => (
         <BoldText>BUILD IN</BoldText>
         JavaScript, TypeScript, C#, Java
       </BuildBlock>
-      <BuildBlock left={100}>
+      <BuildBlock left={150}>
         <BoldText>BUILD WITH</BoldText>
         React, Angular, Redux, Webpack, Babel, .NET, UWP
       </BuildBlock>
-      <BuildBlock left={200}>
+      <BuildBlock left={300}>
         <BoldText>BUILD FOR</BoldText>
         web, Node, Windows, IoT, Mac, mobile
       </BuildBlock>
