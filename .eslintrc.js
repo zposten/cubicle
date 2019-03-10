@@ -2,29 +2,30 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    node: true
+    node: true,
   },
   extends: ['eslint:recommended', 'plugin:react/recommended'],
-  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: [
-    'react'
-  ],
+  plugins: ['react'],
   rules: {
-    'indent': ['warn', 2],
-    'linebreak-style': ['warn','unix'],
-    'quotes': ['warn', 'single'],
-    'semi': ['warn', 'never'],
-    'no-trailing-spaces': ['warn', { ignoreComments: true }],
-    'object-curly-spacing': ['warn', 'never'],
+    // Turn off rules that prettier conflicts with
+    'indent': 'off', 
+    'quotes': 'off',
+    'semi': 'off',
+    'no-trailing-spaces': 'off',
+    'object-curly-spacing': 'off',
     'react/no-unescaped-entities': 'off',
     'no-console': 'warn',
-    'no-unused-vars': 'warn',
-  }
-};
+    'quotes': 'off',
+    'linebreak-style': ['warn', 'unix'],
+  },
+  settings: {
+    react: { version: 'detect' },
+  },
+}
