@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import {primary} from 'general/theme'
 import {Layout, Navigation} from 'components'
-import {Card} from './apps/Card'
+import {Card} from '../components/Card'
 import {Title} from 'components/Title'
 
 const Wrapper = styled.div`
