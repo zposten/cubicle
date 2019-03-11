@@ -24,6 +24,7 @@ module.exports = {
     'no-console': 'warn',
     'quotes': 'off',
     'linebreak-style': ['warn', 'unix'],
+    'no-unused-vars': 'warn'
   },
   settings: {
     react: { version: 'detect' },
