@@ -29,9 +29,15 @@ const Wrapper = styled.div`
 export function Navigation(props) {
   return (
     <Wrapper>
-      <Link href='/'><A>Home</A></Link>
-      <Link href='/blog'><A>Blog</A></Link>
-      <Link href='/apps'><A>Apps</A></Link>
+      <Link href="/">
+        <A>Home</A>
+      </Link>
+      <Link href="/blog">
+        <A>Blog</A>
+      </Link>
+      <Link href="/apps">
+        <A>Apps</A>
+      </Link>
     </Wrapper>
   )
 }

@@ -15,14 +15,15 @@ const MyButtonBase = styled(ButtonBase)`
 const Wrapper = styled(MyButtonBase)`
   background-color: ${lighten(0.05, primary)} !important;
   display: grid !important;
-  grid-template-areas: ${props => (props.flip ? '"text pic"' : '"pic text"')};
-  grid-template-columns: ${props => (props.flip ? '1fr auto' : 'auto 1fr')};
+  grid-template-columns: [pic] 1fr [text] 1fr;
   width: 100%;
   overflow: hidden;
   cursor: pointer;
   height: ${props => props.height || 'auto'};
   position: relative;
   border: 5px;
+  max-width: 700px;
+  height: 250px;
 
   transition: 0.1s ease-in;
 
@@ -33,48 +34,40 @@ const Wrapper = styled(MyButtonBase)`
   }
 `
 
-const ImageWrapper = styled.div`
-  grid-area: pic;
-  /* width: 100%; */
-  /* max-width: 300px; */
-  height: 100%;
-  /* overflow: hidden; */
-  place-self: ${props => (props.flip ? 'end' : 'start')};
-`
-
 const Image = styled.div`
+  grid-column: pic;
   height: 100%;
+  width: 100%;
+  place-self: ${props => (props.flip ? 'end' : 'start')};
   background-image: url(${props => props.src});
   background-repeat: no-repeat;
   background-size: cover;
-  width: 300px;
 `
 
 const TextWrapper = styled.div`
+  grid-column: text;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: [title] auto [description] 1fr;
   grid-gap: 20px;
-  grid-template-areas: 'title' 'description';
   margin: auto;
   margin-left: 30px;
+  margin-right: 30px;
 `
 
-const Title = styled.h3`
+const Title = styled.h4`
   margin: 0;
-  grid-area: title;
+  grid-row: title;
 `
 
 const Description = styled.p`
   margin: 0;
-  grid-area: description;
+  grid-row: description;
 `
 
 export function Card(props) {
   return (
-    <Wrapper flip={props.flip} height={props.height} component="div">
-      <ImageWrapper flip={props.flip}>
-        <Image src={props.src} />
-      </ImageWrapper>
+    <Wrapper height={props.height} component="div">
+      <Image src={props.src} />
       <TextWrapper>
         <Title>{props.title}</Title>
         <Description>{props.description}</Description>
@@ -87,6 +80,18 @@ Card.propTypes = {
   src: PropTypes.string.isRequired,
   title: PropTypes.string,
   description: PropTypes.string,
-  flip: PropTypes.bool,
   height: PropTypes.string,
 }
+
+export const CardColumn = styled.div`
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > *:not(:last-child) {
+    margin-bottom: 30px;
+  }
+`

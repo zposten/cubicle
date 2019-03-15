@@ -1,59 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {primary} from 'general/theme'
-import {Layout, Navigation} from 'components'
-import {Card} from '../components/Card'
-import {Title} from 'components/Title'
+import {PageLayout, Card, CardColumn, Title} from 'components'
 
-const Wrapper = styled.div`
-  position: relative;
-  margin: 100px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: Roboto, Arial;
-`
-
-const CardColumn = styled.div`
-  width: 100%;
-  max-width: 1000px;
-
-  & > *:not(:last-child) {
-    margin-bottom: 30px;
-  }
-`
-
-const LittleCubes = styled.img`
-  position: absolute;
-  top: 50px;
-  left: 20px;
-  width: 250px;
-`
-
-export default class Index extends React.Component {
+export default class Apps extends React.Component {
   render() {
     return (
-      <Layout>
-        <LittleCubes src="/static/little-cubes.png" />
-        <Navigation />
-        <Wrapper>
-          <Title title="Apps" subtitle="Fun little bits of code" />
-
-          <CardColumn>
-            {[1, 2, 3, 4, 5, 6, 7].map(i => (
-              <Card
-                key={i}
-                height="250px"
-                src={`http://placekitten.com/${i * 150}/${i * 100}`}
-                title="Zach is cool"
-                flip={i % 2 == 0 ? true : false}
-                description="This is really really really really realyyl aslkdf alskjd fowi flwfjwlij  cool"
-              />
-            ))}
-          </CardColumn>
-        </Wrapper>
-      </Layout>
+      <PageLayout>
+        <Title title="Apps" subtitle="Fun little bits of code" />
+        <CardColumn>
+          <Card
+            src="/static/calendar.jpg"
+            title="Scheduler"
+            description={`A tool for any student at any university 
+              to assist with choosing a class schedule`}
+          />
+          <Card
+            src="/static/jeopardy.jpg"
+            title="Jeopardy Calculator"
+            description={`A tool for keeping track of your score 
+            while you watch Jeopardy!`}
+          />
+          <Card
+            src="/static/mainframe.jpg"
+            title="Google Mainframe Access"
+            description={`Access to a portion of Google's 
+            endless knowledge`}
+          />
+        </CardColumn>
+      </PageLayout>
     )
   }
 }
