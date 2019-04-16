@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {PageLayout, Card, CardColumn, Title} from 'components'
+import {PageLayout} from 'layout'
+import {Card, CardColumn, Title} from 'components'
 
 export default class Apps extends React.Component {
   render() {

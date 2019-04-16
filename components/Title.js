@@ -17,6 +17,7 @@ const BigText = styled.h1`
   text-transform: uppercase;
   margin: 0;
   font-size: 4em;
+  text-align: center;
 `
 
 const SmallText = styled.h4`

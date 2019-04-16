@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
 
 import {primary} from 'general/theme'
-import {Layout, Navigation, Card, CardColumn, Title} from 'components'
+import {Layout} from './'
+import {Navigation, Card, CardColumn, Title} from 'components'
 
 const Wrapper = styled.div`
   position: relative;
@@ -16,9 +18,23 @@ const Wrapper = styled.div`
 
 const LittleCubes = styled.img`
   position: absolute;
-  top: 50px;
-  left: 20px;
-  width: 250px;
+  top: 5px;
+  left: 5px;
+  width: 100px;
+  opacity: 0.5;
+
+  ${breakpoint('md')`
+    top: 20px;
+    left: 10px;
+    width: 150px;
+    opacity: 1;
+  `}
+
+  ${breakpoint('lg')`
+    top: 50px;
+    left: 20px;
+    width: 250px;
+  `}
 `
 
 export function PageLayout(props) {

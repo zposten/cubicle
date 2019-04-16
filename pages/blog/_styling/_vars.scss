@@ -1,0 +1,37 @@
+$primary: #1f2833;
+$primaryDark: darken($primary, 2%); // #0b0c10;
+$secondary: #67fcf1;
+$secondaryDark: #4ca29f;
+$neutral: #c5c6c7;
+
+$borderColor: $neutral;
+
+$xs-width: 1px;
+$sm-width: 576px;
+$md-width: 768px;
+$lg-width: 992px;
+$xl-width: 120px;
+
+@mixin sm {
+  @media (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$md-width}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$xl-width}) {
+    @content;
+  }
+}

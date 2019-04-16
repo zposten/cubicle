@@ -6,11 +6,11 @@ export const neutral = '#c5c6c7'
 
 export const theme = {
   breakpoints: {
-    xs: 0,
+    xs: 1,
     sm: 576,
     md: 768,
     lg: 992,
-    xl: 1200
+    xl: 1200,
   },
   global: {
     font: {
@@ -20,8 +20,8 @@ export const theme = {
       'light-2': '#f5f5f5',
       'dark-1': primary,
       text: {
-        'light': primaryDark,
-        'dark': 'white',
+        light: primaryDark,
+        dark: 'white',
       },
       primary: secondary,
     },
@@ -50,12 +50,12 @@ export const theme = {
   },
   checkBox: {
     border: {
-      radius: '0px'
-    }
+      radius: '0px',
+    },
   },
   layer: {
     border: {
-      radius: '0px'
-    }
-  }
+      radius: '0px',
+    },
+  },
 }

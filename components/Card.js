@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import {primary, secondary} from 'general/theme'
 import {lighten} from 'polished'
-import TouchRipple from '@material-ui/core/ButtonBase/TouchRipple'
 import ButtonBase from '@material-ui/core/ButtonBase'
-import {Button} from '@material-ui/core'
+
+import {primary} from 'general/theme'
 
 const MyButtonBase = styled(ButtonBase)`
   font-size: inherit;
@@ -65,12 +64,14 @@ const Description = styled.p`
 `
 
 export function Card(props) {
+  let {height, src, title, description, ...rest} = props
+
   return (
-    <Wrapper height={props.height} component="div">
-      <Image src={props.src} />
+    <Wrapper height={height} component="div" {...rest}>
+      <Image src={src} />
       <TextWrapper>
-        <Title>{props.title}</Title>
-        <Description>{props.description}</Description>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
       </TextWrapper>
     </Wrapper>
   )
@@ -82,16 +83,3 @@ Card.propTypes = {
   description: PropTypes.string,
   height: PropTypes.string,
 }
-
-export const CardColumn = styled.div`
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  & > *:not(:last-child) {
-    margin-bottom: 30px;
-  }
-`

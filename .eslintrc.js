@@ -1,18 +1,17 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    node: true,
-  },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  parser: "babel-eslint",
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2018,
-    sourceType: 'module'
+      ecmaVersion: 6,
+      sourceType: "module",
+      ecmaFeatures: {
+          jsx: true,
+          modules: true,
+          experimentalObjectRestSpread: true
+      }
   },
-  plugins: ['react'],
+  env: { es6: true, browser: true },
+  plugins: ["react"],
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   rules: {
     // Turn off rules that prettier conflicts with
     'indent': 'off', 
@@ -21,12 +20,15 @@ module.exports = {
     'no-trailing-spaces': 'off',
     'object-curly-spacing': 'off',
     'react/no-unescaped-entities': 'off',
-    'no-console': 'warn',
+    'no-console': 'off',
     'quotes': 'off',
     'linebreak-style': ['warn', 'unix'],
     'no-unused-vars': 'warn'
   },
   settings: {
-    react: { version: 'detect' },
+    react: { 
+      version: 'detect',
+      pragma: "React",
+    },
   },
 }
