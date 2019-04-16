@@ -23,6 +23,7 @@ export function BlogCardList(props) {
           <Card
             key={c.id}
             src={`/static/${c.imageFilename}`}
+            backupSrc={'/static/code.png'}
             title={c.title}
             description={c.description}
             onClick={() => handleCardClick(c.id)}

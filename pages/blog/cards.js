@@ -1,4 +1,5 @@
 import {breakfast, dinner, sides} from './recipes'
+import code from './posts'
 
 export default {
   default: [
@@ -15,6 +16,7 @@ export default {
       description: 'Delicious concoctions that I hav personally vetted',
     },
   ],
+  code,
   food: {
     default: [
       {

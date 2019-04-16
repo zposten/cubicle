@@ -37,8 +37,9 @@ const Image = styled.div`
   grid-column: pic;
   height: 100%;
   width: 100%;
-  place-self: ${props => (props.flip ? 'end' : 'start')};
-  background-image: url(${props => props.src});
+  place-self: ${p => (p.flip ? 'end' : 'start')};
+  background-image: url(${p => p.src})
+    ${p => p.backupSrc && `, url("${p.backupSrc}")`};
   background-repeat: no-repeat;
   background-size: cover;
 `
@@ -64,11 +65,11 @@ const Description = styled.p`
 `
 
 export function Card(props) {
-  let {height, src, title, description, ...rest} = props
+  let {height, src, backupSrc, title, description, ...rest} = props
 
   return (
     <Wrapper height={height} component="div" {...rest}>
-      <Image src={src} />
+      <Image src={src} backupSrc={backupSrc} />
       <TextWrapper>
         <Title>{title}</Title>
         <Description>{description}</Description>
@@ -79,6 +80,7 @@ export function Card(props) {
 
 Card.propTypes = {
   src: PropTypes.string.isRequired,
+  backupSrc: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   height: PropTypes.string,
