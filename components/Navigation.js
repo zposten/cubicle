@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 
-const A = styled.a`
+const LinkText = styled.div`
   margin-right: 40px;
   color: blue;
   cursor: pointer;
@@ -30,13 +30,13 @@ export function Navigation(props) {
   return (
     <Wrapper>
       <Link href="/">
-        <A>Home</A>
+        <LinkText>Home</LinkText>
       </Link>
       <Link href="/blog">
-        <A>Blog</A>
+        <LinkText>Blog</LinkText>
       </Link>
       <Link href="/apps">
-        <A>Apps</A>
+        <LinkText>Apps</LinkText>
       </Link>
     </Wrapper>
   )

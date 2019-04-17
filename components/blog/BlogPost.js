@@ -7,7 +7,7 @@ import {traverseObject} from 'general/util'
 import cards from './cards'
 import {Title, Card, CardColumn} from 'components'
 import {PageLayout} from 'layout'
-import './_styling/markdown.scss'
+import {Markdown} from 'components/Markdown'
 
 export function generateBlogPostDefinition(slug) {
   let path = slug.split('/')
@@ -39,14 +39,12 @@ const BlogImage = styled.div`
 
 export function BlogPost(props) {
   let {post} = props
-  // Format required by dangerouslySetInnerHTML
-  post.__html = post.html
 
   return (
     <PageLayout>
       <Title title={post.title} subtitle={post.description} />
       <BlogImage src={post.imageFilename} />
-      <div dangerouslySetInnerHTML={post} className="markdown" />
+      <Markdown html={post.html} />
     </PageLayout>
   )
 }
