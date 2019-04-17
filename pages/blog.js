@@ -2,9 +2,9 @@ import React from 'react'
 import ErrorPage from 'next/error'
 
 import {traverseObject} from 'general/util'
-import cards from './blog/cards'
-import {BlogCardList} from './blog/BlogCardList'
-import {BlogPost, generateBlogPostDefinition} from './blog/BlogPost'
+import cards from 'components/blog/cards'
+import {BlogCardList} from 'components/blog/BlogCardList'
+import {BlogPost, generateBlogPostDefinition} from 'components/blog/BlogPost'
 
 export default class Blog extends React.Component {
   static async getInitialProps({query}) {

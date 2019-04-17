@@ -13,12 +13,6 @@ app
   .then(() => {
     const server = express()
 
-    server.get('/p/:id', (req, res) => {
-      const actualPage = '/post'
-      const queryParams = {id: req.params.id}
-      app.render(req, res, actualPage, queryParams)
-    })
-
     server.get(['/blog', '/blog/*'], (req, res) => {
       return app.render(req, res, '/blog', {slug: req.params[0]})
     })

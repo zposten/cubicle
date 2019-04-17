@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import {PageLayout} from 'layout'
 import {Card, CardColumn, Title} from 'components'

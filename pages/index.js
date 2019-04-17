@@ -8,7 +8,7 @@ import {
   ProjectDisplay,
   Technologies,
   OtherInterests,
-} from './home'
+} from 'components/home'
 
 export default class Index extends React.Component {
   render() {
