@@ -10,19 +10,19 @@ export default class Apps extends React.Component {
         <Title title="Apps" subtitle="Fun little bits of code" />
         <CardColumn>
           <Card
-            src="/static/calendar.jpg"
+            src="/static/images/calendar.jpg"
             title="Scheduler"
             description={`A tool for any student at any university 
               to assist with choosing a class schedule`}
           />
           <Card
-            src="/static/jeopardy.jpg"
+            src="/static/images/jeopardy.jpg"
             title="Jeopardy Calculator"
             description={`A tool for keeping track of your score 
             while you watch Jeopardy!`}
           />
           <Card
-            src="/static/mainframe.jpg"
+            src="/static/images/mainframe.jpg"
             title="Google Mainframe Access"
             description={`Access to a portion of Google's 
             endless knowledge`}

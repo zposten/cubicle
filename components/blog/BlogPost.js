@@ -20,7 +20,7 @@ export function generateBlogPostDefinition(slug) {
 }
 
 const BlogImage = styled.div`
-  background-image: url('/static/${p => p.src}'), url('/static/code.png');
+  background-image: url('/static/images/${p => p.src}'), url('/static/images/code.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

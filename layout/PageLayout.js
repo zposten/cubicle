@@ -40,7 +40,7 @@ const LittleCubes = styled.img`
 export function PageLayout(props) {
   return (
     <Layout>
-      <LittleCubes src="/static/little-cubes.png" />
+      <LittleCubes src="/static/images/little-cubes.png" />
       <Navigation />
       <Wrapper>{props.children}</Wrapper>
     </Layout>

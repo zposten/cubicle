@@ -62,6 +62,6 @@ export const MiniProfile = () => (
         dedicated to finding effective solutions to complex problems.
       </BioText>
     </Bio>
-    <ProfilePic src="/static/zach.jpg" />
+    <ProfilePic src="/static/images/zach.jpg" />
   </Wrapper>
 )
