@@ -50,18 +50,33 @@ const TextWrapper = styled.div`
   grid-template-rows: [title] auto [description] 1fr;
   grid-gap: 20px;
   margin: auto;
-  margin-left: 30px;
-  margin-right: 30px;
 `
 
 const Title = styled.h4`
   margin: 0;
   grid-row: title;
+  margin-left: 30px;
+  margin-right: 30px;
 `
 
 const Description = styled.p`
   margin: 0;
   grid-row: description;
+  margin-left: 30px;
+  margin-right: 30px;
+`
+
+const Info = styled.div`
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  padding-left: 30px;
+  opacity: 0.6;
 `
 
 export function Card(props) {
@@ -73,6 +88,9 @@ export function Card(props) {
       <TextWrapper>
         <Title>{title}</Title>
         <Description>{description}</Description>
+        <Info>
+          <div>{props.date}</div>
+        </Info>
       </TextWrapper>
     </Wrapper>
   )
@@ -81,7 +99,8 @@ export function Card(props) {
 Card.propTypes = {
   src: PropTypes.string.isRequired,
   backupSrc: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   description: PropTypes.string,
   height: PropTypes.string,
+  date: PropTypes.string,
 }

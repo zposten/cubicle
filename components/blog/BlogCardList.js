@@ -27,6 +27,7 @@ export function BlogCardList(props) {
             title={c.title}
             description={c.description}
             onClick={() => handleCardClick(c.id)}
+            date={c.dateString}
           />
         ))}
       </CardColumn>
