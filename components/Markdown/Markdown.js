@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import breakpoint from 'styled-components-breakpoint'
 
+import {textColumn} from 'general/textColumn'
 import {
   CodeStyles,
   InputStyles,
@@ -22,11 +22,7 @@ const Wrapper = styled.div`
   color: white;
   width: 100%;
   font-size: 1.2em;
-  max-width: 900px;
-
-  ${breakpoint('md')`
-    width: 66%;
-  `}
+  ${textColumn}
 `
 
 export function Markdown(props) {

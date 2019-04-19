@@ -4,7 +4,7 @@ description: What are the three most common letters you type when using git?  'g
 author: Zach Posten
 date: 2017-2-20
 tags: git, efficiency
-id: git-map-to-k
+id: 'git-map-to-k'
 ---
 
 ## Efficiency
@@ -29,7 +29,8 @@ Then paste this text into it:
 
 ```bash
 #!/bin/bash
-alias k='git' #Where 'k' is your shortcut letter
+# Where 'k' is your shortcut letter
+alias k='git'
 ```
 
 Well that was easy! Open a bash shell and try it out! You'll have to close and re-open and bash windows that you currently have open. It's worth noting that this alias will not work in the windows command prompt.
@@ -37,5 +38,6 @@ Well that was easy! Open a bash shell and try it out! You'll have to close and r
 One final thing, after using that shortcut for a little while, you might notice that sadly, the handy Git tab-complete no longer works. But you can re-enable it by adding one more line to your `.bashrc`:
 
 ```bash
-complete -o default -o nospace -F _git k #Where 'k' is your shortcut letter
+# Where 'k' is your shortcut letter
+complete -o default -o nospace -F _git k
 ```

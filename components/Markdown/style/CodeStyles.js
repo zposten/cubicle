@@ -1,22 +1,30 @@
 import {createGlobalStyle} from 'styled-components'
+import {lighten} from 'polished'
+import {primary, primaryDark, neutral} from '../../../general/theme'
 
 export const CodeStyles = createGlobalStyle`
   .markdown {
     & code {
-      background-color: var(--dark);
+      background-color: ${primaryDark};
       padding: 4px;
       margin: 2px;
+      font-size: 0.7em;
+
+      & {
+        line-height: 0.7em;
+      }
     }
 
     & pre {
-      background-color: var(--dark);
+      background-color: ${primaryDark};
       margin: 10px;
       padding: 10px;
       overflow: auto;
       max-height: 500px;
+      padding-bottom: 0;
 
       &::-webkit-scrollbar-track {
-        background-color: var(--light);
+        background-color: ${primary};
       }
       &::-webkit-scrollbar {
         width: 5px;
@@ -24,22 +32,28 @@ export const CodeStyles = createGlobalStyle`
       }
 
       &::-webkit-scrollbar-thumb {
-        background-color: #151515;
+        background-color: ${lighten(0.2, primaryDark)};
         opacity: 0.6;
         border-radius: 5px;
       }
 
       &::-webkit-scrollbar-corner {
-        background-color: var(--light);
+        background-color: ${primary};
       }
 
-      & code[class] {
-        &:after {
+      code {
+        /* Prevent the first line from being offset */
+        margin-left: 0;
+        padding-left: 0;
+        border-left: 0;
+        
+        /* Inject text telling the current language being highlighted */
+        &::after {
           content: attr(class);
           display: block;
           text-align: right;
           font-size: smaller;
-          padding-top: 5px;
+          margin-top: 30px;
         }
       }
     }

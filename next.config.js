@@ -27,5 +27,5 @@ function configureWebpack(config) {
 }
 
 let webpack = {webpack: configureWebpack}
-// let sass = withSass(webpack)
+// let css = withCss(webpack)
 module.exports = webpack

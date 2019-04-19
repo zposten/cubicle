@@ -35,6 +35,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Anton"
             rel="stylesheet"
           />
+          <link href="/static/qtcreator_dark.css" rel="stylesheet" />
         </Head>
         <body>
           <Main />

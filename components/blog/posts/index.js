@@ -5,7 +5,9 @@ import * as iosUiCreation from './ios-ui-creation-methods.md'
 import * as iosPopover from './ios-ui-popover-controller.md'
 import * as iosVarCopy from './ios-view-var-copy.md'
 
+import * as gitI from './git-i.md'
 import * as gitK from './git-map-to-k.md'
+import * as gitMove from './git-move.md'
 
 function parsePosts() {
   let posts = [
@@ -15,7 +17,9 @@ function parsePosts() {
     iosUiCreation,
     iosPopover,
     iosVarCopy,
+    gitI,
     gitK,
+    gitMove,
   ]
 
   for (let post of posts) {

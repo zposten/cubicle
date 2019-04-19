@@ -26,7 +26,7 @@ id: ios-nav-controller
 
     ```swift
     protocol CategoriesControllerDelegate {
-        func categorySelected(selectedCategory: String) -> Void
+      func categorySelected(selectedCategory: String) -> Void
     }
     ```
 
@@ -35,8 +35,8 @@ id: ios-nav-controller
   - The delegate (mainVC) then needs to implement the delegate protocol that was created:
 
     ```swift
-     class mainVC: UIViewController, CategoriesControllerDelegate{...}
-        func categorySelected(selectedCategory: String) {...}
+    class mainVC: UIViewController, CategoriesControllerDelegate{...}
+      func categorySelected(selectedCategory: String) {...}
     ```
 
     - Whatever processing needs to be done when the selection is made should be placed in this function.
@@ -45,17 +45,21 @@ id: ios-nav-controller
 
   ```swift
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-  	if let cc = segue.destinationViewController as? CategoriesController {
-  		self.categoryController = cc
-  		cc.delegate = self
-  	}
+    if let cc = segue.destinationViewController as? CategoriesController {
+      self.categoryController = cc
+      cc.delegate = self
+    }
   }
   ```
 
   - Finally, the delegating object needs to call the delegate function on it's delegate reference whenever the necessary information is captured. In this example, this information is captured in the tableView callback method which gets called when the user selects an item from the table view:
 
   ```swift
-  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-  	self.delegate?.categorySelected(self.selectedItem)
+  override func tableView(
+    tableView: UITableView,
+    didSelectRowAtIndexPath: Boolean,
+    indexPath: NSIndexPath
+  ) {
+    self.delegate?.categorySelected(self.selectedItem)
   }
   ```

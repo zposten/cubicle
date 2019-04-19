@@ -34,7 +34,7 @@ id: goulash
 
 ### Stage 2
 
-1. Add all the remaining ingredients, _except for the noodles!!_
+1. Add all the remaining ingredients, except for the noodles!!
 1. Bring the concoction to a boil
 1. Reduce to low heat, cover, and simmer for about 20 minutes, stirring occasionally.
 
