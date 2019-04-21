@@ -1,8 +1,12 @@
 const FontFaceObserver = require('fontfaceobserver')
 
 export function loadFonts() {
-  loadFont('Roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900')
-  loadFont('Anton', 'https://fonts.googleapis.com/css?family=Anton')
+  loadFont(
+    'Roboto',
+    'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900',
+  )
+  // Moved this to _document to be in the head
+  // loadFont('Anton', 'https://fonts.googleapis.com/css?family=Anton')
 }
 
 function loadFont(name, url) {

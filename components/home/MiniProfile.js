@@ -11,9 +11,9 @@ const Wrapper = styled.div`
   background: white;
 
   grid-template-rows: auto 1fr;
-  grid-template-areas: 
-    "pic"
-    "bio";
+  grid-template-areas:
+    'pic'
+    'bio';
 
   ${breakpoint('lg')`
     grid-template-rows: 1fr;
@@ -55,13 +55,13 @@ export const MiniProfile = () => (
     <Bio>
       <TitleBlock>A professional problem solver</TitleBlock>
       <BioText>
-        I am a software engineer by trade, but at my core, I am a problem solver.
-        I love puzzles in all forms and I am constantly looking for new challenges.
-        With a Software Engineering degree from MSOE, as well as my experience at
-        Johnson Controls and as a software consultant, I am dedicated to finding
-        effective solutions while writing beautiful code.
+        I am a software engineer by trade, but at my core, I am a problem
+        solver. I love puzzles in all forms and I am constantly looking for new
+        challenges. With a Software Engineering degree from MSOE, as well as my
+        experience at Johnson Controls and as a software consultant, I am
+        dedicated to finding effective solutions to complex problems.
       </BioText>
     </Bio>
-    <ProfilePic src='/static/zach.jpg'  />
+    <ProfilePic src="/static/images/zach.jpg" />
   </Wrapper>
 )

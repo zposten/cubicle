@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
     const sheet = new ServerStyleSheet()
 
     // Step 2: Retrieve styles from components in the page
-    const page = renderPage((App) => (props) =>
+    const page = renderPage(App => props =>
       sheet.collectStyles(<App {...props} />),
     )
 
@@ -30,7 +30,12 @@ export default class MyDocument extends Document {
           {this.props.styleTags}
           {cssFontSizes}
           {globalStyles}
-          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Anton"
+            rel="stylesheet"
+          />
+          <link href="/static/qtcreator_dark.css" rel="stylesheet" />
         </Head>
         <body>
           <Main />

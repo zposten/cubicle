@@ -15,7 +15,7 @@ export class Layout extends React.Component {
   render() {
     return (
       <Grommet theme={theme}>
-        <Base background='dark-1' fill={true} id='page'>
+        <Base background="dark-1" fill={true} id="page">
           {this.props.children}
         </Base>
       </Grommet>

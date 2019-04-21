@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     src: 'https://c1.staticflickr.com/3/2125/32771761142_af83e395e3_k.jpg', // k
     size: '2048x1365',
@@ -395,4 +395,4 @@ module.exports = [
     msrc: 'https://c1.staticflickr.com/3/2950/32771763572_bb8af95320_z.jpg', //n
     title: 'It smells funny'
   },
-];
+]

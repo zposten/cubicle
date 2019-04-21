@@ -3,7 +3,7 @@ import {primary} from 'general/theme'
 
 export const TitleBlock = styled.h2`
   background: ${primary};
-  font-family: 'Anton';
+  font-family: Anton, Arial;
   color: white;
   padding: 20px;
   margin-bottom: 20px;

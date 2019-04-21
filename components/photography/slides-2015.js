@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     src: 'https://farm6.staticflickr.com/5789/22569131534_3df0b04b96_k.jpg',
     size: '2048x1612',
@@ -233,4 +233,4 @@ module.exports = [
     msrc: 'https://c1.staticflickr.com/6/5760/23039809719_32046ce5a1_z.jpg',
     title: 'Sparklers'
   },
-];
+]
