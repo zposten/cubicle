@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {rgba} from 'polished'
 
 const totalHeight = 56
@@ -16,9 +16,19 @@ const Wrapper = styled.div`
 
   ${p => p.fullWidth && {width: '100%'}}
 
+  ${p =>
+    p.isDisabled &&
+    css`
+      background-color: ${rgba('white', 0.05)};
+    `}
+
   &:hover {
-    background-color: ${rgba('white', 0.5)};
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+    ${p =>
+      !p.isDisabled &&
+      css`
+        background-color: ${rgba('white', 0.5)};
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+      `}
   }
 `
 
@@ -33,6 +43,8 @@ const Input = styled.input`
   font-size: 1em;
   border: none;
   padding: 10px 5px 0 10px;
+
+  ${p => p.disabled && {opacity: 0.5}}
 
   /* Style the Label component below, but only do so 
    * when the text box is has text in it */
@@ -58,15 +70,22 @@ const Label = styled.label`
 
 export function Textbox(props) {
   const [text, setText] = useState('')
-  const {id, value, ...rest} = props
+  const {id, value, isDisabled, ...rest} = props
+
+  // If one of these has a value and the other doesn't
+  // make sure that text gets set to value so that they
+  // are again the same.
+  if (!!value !== !!text) setText(value)
 
   return (
-    <Wrapper {...rest} id={id}>
+    <Wrapper {...rest} id={id} isDisabled={isDisabled}>
       <Input
+        ref={props.inputRef}
         type="text"
         className={text && 'filled'}
         onChange={e => setText(e.target.value)}
         value={value}
+        disabled={isDisabled}
       />
       <Label htmlFor={id}>{props.label}</Label>
     </Wrapper>
@@ -77,4 +96,6 @@ Textbox.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   value: PropTypes.string,
+  isDisabled: PropTypes.bool,
+  inputRef: PropTypes.any,
 }

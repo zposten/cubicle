@@ -89,8 +89,13 @@ export const ProjectDisplay = () => (
     </Summaries>
 
     <div>
-      <a href="/static/images/zach-posten-resume.pdf" download tabIndex="-1">
-        <ResumeButton color="primary" value="View resume" />
+      <a
+        href="/static/images/zach-posten-resume.pdf"
+        download
+        tabIndex="-1"
+        style={{textDecoration: 'none'}}
+      >
+        <ResumeButton color="primary">View resume</ResumeButton>
       </a>
     </div>
   </Wrapper>
