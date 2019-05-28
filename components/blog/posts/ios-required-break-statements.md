@@ -26,4 +26,4 @@ id: ios-break
 
 ## Status
 
-    *	Question is mostly resolved, though a concrete answer is likely not available.
+- Question is mostly resolved, though a concrete answer is likely not available.
