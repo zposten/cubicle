@@ -12,50 +12,11 @@ export const theme = {
     lg: 992,
     xl: 1200,
   },
-  global: {
-    font: {
-      family: 'Roboto, Arial',
-    },
-    colors: {
-      'light-2': '#f5f5f5',
-      'dark-1': primary,
-      text: {
-        light: primaryDark,
-        dark: 'white',
-      },
-      primary: secondary,
-    },
-    edgeSize: {
-      small: '14px',
-    },
-    elevation: {
-      light: {
-        medium: `
-          0px 2px 4px -1px rgba(0, 0, 0, 0.2), 
-          0px 4px 5px 0px rgba(0, 0, 0, 0.14), 
-          0px 1px 10px 0px rgba(0, 0, 0, 0.12)
-        `,
-      },
-    },
-  },
-  button: {
-    border: {
-      width: '1px',
-      radius: '0px',
-    },
-    padding: {
-      vertical: '8px',
-      horizontal: '16px',
-    },
-  },
-  checkBox: {
-    border: {
-      radius: '0px',
-    },
-  },
-  layer: {
-    border: {
-      radius: '0px',
-    },
+  colors: {
+    primary,
+    primaryDark,
+    secondary,
+    secondaryDark,
+    neutral,
   },
 }

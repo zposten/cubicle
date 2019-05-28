@@ -2,8 +2,8 @@ import React from 'react'
 import Document, {Main, Head, NextScript} from 'next/document'
 import {ServerStyleSheet} from 'styled-components'
 
-import {cssFontSizes} from 'general/cssFontSizes'
-import {globalStyles} from 'general/globalStyles'
+import {CssFontSizes} from 'general/cssFontSizes'
+import {GlobalStyles} from 'general/globalStyles'
 
 export default class MyDocument extends Document {
   static getInitialProps({renderPage}) {
@@ -28,8 +28,6 @@ export default class MyDocument extends Document {
         {/* Step 5: Output the styles in the head  */}
         <Head>
           {this.props.styleTags}
-          {cssFontSizes}
-          {globalStyles}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link
             href="https://fonts.googleapis.com/css?family=Anton"
@@ -38,6 +36,9 @@ export default class MyDocument extends Document {
           <link href="/static/qtcreator_dark.css" rel="stylesheet" />
         </Head>
         <body>
+          <CssFontSizes />
+          <GlobalStyles />
+
           <Main />
           <NextScript />
         </body>

@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import {secondary} from 'general/theme'
-import {textColumn} from 'general/textColumn'
+import {TextColumn} from 'general/textColumn'
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
-  ${textColumn}
+  ${TextColumn}
 `
 
 const BigText = styled.h1`
