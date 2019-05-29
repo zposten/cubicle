@@ -90,7 +90,7 @@ export const ProjectDisplay = () => (
 
     <div>
       <a
-        href="/static/images/zach-posten-resume.pdf"
+        href="/static/zach-posten-resume.pdf"
         download
         tabIndex="-1"
         css={{textDecoration: 'none', outline: 'none'}}

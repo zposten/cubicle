@@ -4,20 +4,9 @@ import {primary, primaryDark, neutral} from '../../../general/theme'
 
 export const CodeStyles = createGlobalStyle`
   .markdown {
-    & code {
+    pre {
       background-color: ${primaryDark};
-      padding: 4px;
-      margin: 2px;
-      font-size: 0.7em;
-
-      & {
-        line-height: 0.7em;
-      }
-    }
-
-    & pre {
-      background-color: ${primaryDark};
-      margin: 10px;
+      margin: 30px 10px;
       padding: 10px;
       overflow: auto;
       max-height: 500px;
@@ -47,7 +36,8 @@ export const CodeStyles = createGlobalStyle`
         padding-left: 0;
         border-left: 0;
         
-        /* Inject text telling the current language being highlighted */
+        /* Inject text specifying the current language being highlighted */
+        /* This text is based on the name of the class applied to the ::after element */
         &::after {
           content: attr(class);
           display: block;
@@ -55,6 +45,17 @@ export const CodeStyles = createGlobalStyle`
           font-size: smaller;
           margin-top: 30px;
         }
+      }
+    }
+
+    code {
+      background-color: ${primaryDark};
+      padding: 4px;
+      margin: 2px;
+      font-size: 0.7em;
+
+      & {
+        line-height: 0.7em;
       }
     }
   }
