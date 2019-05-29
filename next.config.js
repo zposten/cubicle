@@ -10,6 +10,7 @@ function configureWebpack(config) {
         components: path.join(__dirname, 'components'),
         layout: path.join(__dirname, 'layout'),
         general: path.join(__dirname, 'general'),
+        content: path.join(__dirname, 'content'),
       },
     },
     module: {

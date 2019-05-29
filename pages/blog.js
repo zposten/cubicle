@@ -2,7 +2,7 @@ import React from 'react'
 import ErrorPage from 'next/error'
 
 import {traverseObject} from 'general/util'
-import cards from 'components/blog/cards'
+import cards from 'content/cards'
 import {BlogCardList} from 'components/blog/BlogCardList'
 import {BlogPost, generateBlogPostDefinition} from 'components/blog/BlogPost'
 
