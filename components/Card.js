@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import {lighten} from 'polished'
 import ButtonBase from '@material-ui/core/ButtonBase'
+import {withRouter} from 'next/router'
 
 import {primary} from 'general/theme'
 
@@ -79,11 +80,37 @@ const Info = styled.div`
   opacity: 0.6;
 `
 
-export function Card(props) {
-  let {height, src, backupSrc, title, description, ...rest} = props
+function Card(props) {
+  let {
+    height,
+    src,
+    backupSrc,
+    title,
+    description,
+    id,
+    onClick,
+    router,
+    ...rest
+  } = props
+
+  /* If no onClick handler is passed, and an id is explicitly
+   * passed, then automatically append that id to the url when
+   * the card is clicked */
+  function handleClick() {
+    if (onClick) {
+      onClick()
+      return
+    }
+
+    if (id) {
+      let currentUrl = router.asPath
+      let destination = `${currentUrl}/${id}`
+      router.push(destination)
+    }
+  }
 
   return (
-    <Wrapper height={height} component="div" {...rest}>
+    <Wrapper height={height} component="div" onClick={handleClick} {...rest}>
       <Image src={src} backupSrc={backupSrc} />
       <TextWrapper>
         <Title>{title}</Title>
@@ -103,4 +130,9 @@ Card.propTypes = {
   description: PropTypes.string,
   height: PropTypes.string,
   date: PropTypes.string,
+  id: PropTypes.string,
+  router: PropTypes.object.isRequired,
 }
+
+const cardWithRouter = withRouter(Card)
+export {cardWithRouter as Card}
