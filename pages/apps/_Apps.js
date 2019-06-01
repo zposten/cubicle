@@ -10,13 +10,13 @@ export class Apps extends React.Component {
       <PageLayout>
         <Title title="Apps" subtitle="Fun little bits of code" />
         <CardColumn>
-          <Card
+          {/* <Card
             src="/static/images/calendar.jpg"
             title="Scheduler"
             id="scheduler"
             description={`A tool for any student at any university 
               to assist with choosing a class schedule`}
-          />
+          /> */}
           <Card
             src="/static/images/jeopardy.jpg"
             title="Jeopardy Calculator"
