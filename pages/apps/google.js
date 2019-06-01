@@ -1,10 +1,9 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import breakpoint from 'styled-components-breakpoint'
 import {PacmanLoader} from 'react-spinners'
 
 import {PageLayout} from 'layout'
-import {Title, Button, Textbox} from 'components'
+import {Title, Button, Textbox, Column} from 'components'
 import {useQuestionMask} from 'components/apps/useQuestionMask'
 import {secondary} from 'general/theme'
 
@@ -17,12 +16,6 @@ const Wrapper = styled.div`
   > * {
     margin-bottom: 20px;
   }
-`
-
-const Column = styled.div`
-  width: 100%;
-  ${breakpoint('md')`width: 80%;`}
-  ${breakpoint('lg')`width: 50%;`}
 `
 
 const AnswerText = styled.p`
