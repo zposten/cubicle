@@ -4,7 +4,7 @@ import {withRouter} from 'next/router'
 import {PageLayout} from 'layout'
 import {Card, CardColumn, Title} from 'components'
 
-export default class Apps extends React.Component {
+export class Apps extends React.Component {
   render() {
     return (
       <PageLayout>

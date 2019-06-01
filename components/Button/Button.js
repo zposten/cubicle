@@ -16,10 +16,7 @@ const Wrapper = styled.div`
   transition: transform 0.25s ease;
   font-size: 1em;
   cursor: pointer;
-
-  &:focus {
-    outline: 2px solid orange;
-  }
+  outline: none;
 
   ${p => ripple(p.theme.colors[p.zach || 'secondary'])}
 

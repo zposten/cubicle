@@ -4,7 +4,7 @@ import {PacmanLoader} from 'react-spinners'
 
 import {PageLayout} from 'layout'
 import {Title, Button, Textbox, Column} from 'components'
-import {useQuestionMask} from 'components/apps/useQuestionMask'
+import {useQuestionMask} from './useQuestionMask'
 import {secondary} from 'general/theme'
 
 const Wrapper = styled.div`
@@ -38,7 +38,7 @@ const loader = (
   </div>
 )
 
-export default function GoogleAnswers() {
+export function GoogleAnswers() {
   const [shouldRevealAnswer, setShouldRevealAnswer] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [petitionError, setPetitionError] = useState('')

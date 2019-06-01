@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import {ProjectSummary} from './ProjectSummary'
-import {TitleBlock} from '../TitleBlock'
+import {ProjectSummary} from './_ProjectSummary'
+import {TitleBlock} from '../_TitleBlock'
 import {Button} from 'components'
 
 const Wrapper = styled.div`
@@ -93,7 +93,7 @@ export const ProjectDisplay = () => (
         href="/static/images/zach-posten-resume.pdf"
         download
         tabIndex="-1"
-        style={{textDecoration: 'none'}}
+        css={{textDecoration: 'none', outline: 'none'}}
       >
         <ResumeButton color="primary">View resume</ResumeButton>
       </a>
