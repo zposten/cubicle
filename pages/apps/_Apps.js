@@ -24,13 +24,15 @@ export class Apps extends React.Component {
             description={`A tool for keeping track of your score 
             while you watch Jeopardy!`}
           />
-          <Card
-            src="/static/images/mainframe.jpg"
-            title="Google Mainframe Access"
-            id="google"
-            description={`Access to a portion of Google's 
+          {global.window && global.window.isCool && (
+            <Card
+              src="/static/images/mainframe.jpg"
+              title="Google Mainframe Access"
+              id="google"
+              description={`Access to a portion of Google's 
             endless knowledge`}
-          />
+            />
+          )}
         </CardColumn>
       </PageLayout>
     )
