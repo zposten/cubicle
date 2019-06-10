@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
 
-const charToTriggerMask = ';'
+const zachCharToTriggerMask = ';'
+const kiermoCharToTriggerMask = '/'
 
 export function useQuestionMask(isDisabled) {
   const [secret, setSecret] = useState('')
   const [isMaskActive, setIsMaskActive] = useState(false)
   const [petition, setPetition] = useState('')
   const [question, setQuestion] = useState('')
+  const [user, setUser] = useState(null)
 
   function onPetitionKeyDown(e) {
     if (isDisabled) {
@@ -26,11 +28,17 @@ export function useQuestionMask(isDisabled) {
         setSecret(backspace(secret))
         setPetition(backspace(petition))
       }
-    } else if (e.key === charToTriggerMask) {
+    } else if (
+      e.key === zachCharToTriggerMask ||
+      e.key === kiermoCharToTriggerMask
+    ) {
       // Stop onPetitionChange from being fired
       e.preventDefault()
 
-      typePetitionCharacter('', true)
+      let user = e.key === zachCharToTriggerMask ? 'zach' : 'kiermo'
+      setUser(user)
+
+      typePetitionCharacter('', true, user)
       setIsMaskActive(!isMaskActive)
     }
   }
@@ -42,7 +50,11 @@ export function useQuestionMask(isDisabled) {
   }
 
   function typePetitionCharacter(char, shouldMaskTyping = isMaskActive) {
-    const maskText = 'Google, my name is Zachary Posten, from Milwaukee, WI'
+    const zachMaskText = 'Google, my name is Zachary Posten, from Milwaukee, WI'
+    const kiermoMaskText =
+      'Google, my name is Kierstyn Robbins, from Milwaukee, WI'
+
+    let maskText = user === 'zach' ? zachMaskText : kiermoMaskText
 
     let newSecret = shouldMaskTyping ? secret + char : secret
     let newPetition = shouldMaskTyping
