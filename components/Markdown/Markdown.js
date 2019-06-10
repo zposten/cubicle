@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import {textColumn} from 'general/textColumn'
+import {TextColumn} from 'general/textColumn'
 import {
   CodeStyles,
   InputStyles,
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   color: white;
   width: 100%;
   font-size: 1.2em;
-  ${textColumn}
+  ${TextColumn}
 `
 
 export function Markdown(props) {

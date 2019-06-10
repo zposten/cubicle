@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 import {traverseObject} from 'general/util'
-import cards from './cards'
+import cards from 'content/cards'
 import {Title, Card, CardColumn} from 'components'
 import {PageLayout} from 'layout'
 import {Markdown} from 'components/Markdown'
@@ -20,7 +20,8 @@ export function generateBlogPostDefinition(slug) {
 }
 
 const BlogImage = styled.div`
-  background-image: url('/static/images/${p => p.src}'), url('/static/images/code.png');
+  background-image: url('/static/images/${p =>
+    p.src}'), url('/static/images/code.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

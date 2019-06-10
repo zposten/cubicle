@@ -2,11 +2,11 @@ import React from 'react'
 import ErrorPage from 'next/error'
 
 import {traverseObject} from 'general/util'
-import cards from 'components/blog/cards'
-import {BlogCardList} from 'components/blog/BlogCardList'
-import {BlogPost, generateBlogPostDefinition} from 'components/blog/BlogPost'
+import cards from 'content/cards'
+import {BlogCardList} from './_BlogCardList'
+import {BlogPost, generateBlogPostDefinition} from './_BlogPost'
 
-export default class Blog extends React.Component {
+export class Blog extends React.Component {
   static async getInitialProps({query}) {
     const slug = query.slug
     const path = slug && slug.split('/')

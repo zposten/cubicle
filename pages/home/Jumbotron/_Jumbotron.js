@@ -5,11 +5,10 @@ import breakpoint from 'styled-components-breakpoint'
 
 import {secondary, secondaryDark} from 'general/theme'
 import {GithubIcon, TwitterIcon, LinkedInIcon} from 'general/socialNetworkIcons'
-import {NeonText} from './NeonText'
-
+import {NeonText} from './_NeonText'
 
 const DropShadow = styled.div`
-  filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.5));
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.5));
 `
 
 const Wrapper = styled.div`
@@ -19,12 +18,16 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  background-image: radial-gradient(circle, ${secondary} 20%, ${secondaryDark} 80%);
+  background-image: radial-gradient(
+    circle,
+    ${secondary} 20%,
+    ${secondaryDark} 80%
+  );
   clip-path: polygon(
-    0 0, /* left top */
-    100% 0, /* right top */ 
-    100% calc(100% - 6vw), /* right bottom */
-    0 100% /* left bottom */
+    0 0,
+    /* left top */ 100% 0,
+    /* right top */ 100% calc(100% - 6vw),
+    /* right bottom */ 0 100% /* left bottom */
   );
   box-shadow: 20px 20px;
 `
@@ -35,7 +38,8 @@ const Cube = styled.img`
   position: relative;
   transition: filter 0.5s;
 
-  &.hover, &:hover {
+  &.hover,
+  &:hover {
     filter: drop-shadow(10px 10px 50px white);
   }
 
@@ -52,8 +56,6 @@ const Content = styled.div`
   align-items: center;
 `
 
-
-
 const Line = styled.div`
   height: 2px;
   width: 100px;
@@ -65,12 +67,12 @@ const SmallText = styled.div`
   margin-top: 20px;
 `
 
-const SocialLink = (props) => {
+const SocialLink = props => {
   let Link = styled.a`
     margin-right: ${props.last ? 0 : 5}px;
   `
   return (
-    <Link href={props.href} target='_blank'>
+    <Link href={props.href} target="_blank">
       {props.children}
     </Link>
   )
@@ -93,15 +95,21 @@ export function Jumbotron() {
   return (
     <DropShadow>
       <Wrapper>
-        <Cube src='/static/images/cube.png' />
+        <Cube src="/static/images/cube.png" />
         <Content>
           <NeonText>ZACH POSTEN</NeonText>
           <Line />
           <SmallText>SOFTWARE ENGINEER</SmallText>
           <Socials>
-            <SocialLink href='http://www.github.com/zposten'><GithubIcon /></SocialLink>
-            <SocialLink href='http://www.twitter.com/ZachPosten'><TwitterIcon /></SocialLink>
-            <SocialLink href='http://www.linkedin.com/in/zachposten' last><LinkedInIcon /></SocialLink>
+            <SocialLink href="http://www.github.com/zposten">
+              <GithubIcon />
+            </SocialLink>
+            <SocialLink href="http://www.twitter.com/ZachPosten">
+              <TwitterIcon />
+            </SocialLink>
+            <SocialLink href="http://www.linkedin.com/in/zachposten" last>
+              <LinkedInIcon />
+            </SocialLink>
           </Socials>
         </Content>
       </Wrapper>

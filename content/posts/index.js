@@ -8,6 +8,7 @@ import * as iosVarCopy from './ios-view-var-copy.md'
 import * as gitI from './git-i.md'
 import * as gitK from './git-map-to-k.md'
 import * as gitMove from './git-move.md'
+import * as gitTimePt1 from './git-time-travel-pt1.md'
 
 function parsePosts() {
   let posts = [
@@ -20,6 +21,7 @@ function parsePosts() {
     gitI,
     gitK,
     gitMove,
+    gitTimePt1,
   ]
 
   for (let post of posts) {

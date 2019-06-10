@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components'
 import {secondary} from 'general/theme'
 
+// prettier-ignore
 const startShadow = css`
   text-shadow: 
     0 0 10px #fff, 
@@ -13,11 +14,13 @@ const startShadow = css`
     0 0 150px ${secondary};
 `
 
+// prettier-ignore
 export const NeonText = styled.h1`
   font-family: Anton, Arial;
   line-height: normal;
   margin-bottom: 10px;
   font-size: 4em;
+  cursor: default;
 
   &.hover, &:hover {
     animation: 
