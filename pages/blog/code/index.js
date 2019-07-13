@@ -9,6 +9,4 @@ function BlogCode(props) {
   return <BlogCardList cards={codeCards} router={props.router} />
 }
 
-BlogCode.getInitialProps = async ({query}) => ({query})
-
 export default withRouter(BlogCode)

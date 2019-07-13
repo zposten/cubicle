@@ -32,9 +32,13 @@ export function BlogPost(props) {
 
   return (
     <PageLayout>
-      <Title title={post.title} subtitle={post.description} />
-      <BlogImage src={post.imageFilename} />
-      <Markdown html={post.html} />
+      {post && (
+        <>
+          <Title title={post.title} subtitle={post.description} />
+          <BlogImage src={post.imageFilename} />
+          <Markdown html={post.html} />
+        </>
+      )}
     </PageLayout>
   )
 }

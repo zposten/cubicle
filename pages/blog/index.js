@@ -1,10 +1,11 @@
 import React from 'react'
+import {withRouter} from 'next/router'
 
 import {PageLayout} from 'layout'
 import {Title, Card, CardColumn} from 'components'
 import {handleCardClick} from 'components/blog'
 
-export default function Blog(props) {
+function Blog(props) {
   return (
     <PageLayout>
       <Title title="Blog" />
@@ -13,15 +14,17 @@ export default function Blog(props) {
           title="Programming"
           src="/static/images/code.png"
           description="Things I've learned while coding away"
-          onClick={() => handleCardClick(props.url, 'code')}
+          onClick={() => handleCardClick(props.router, 'code')}
         />
         <Card
           title="Recipes"
           src="/static/images/ingredients.jpg"
           description="Delicious concoctions that I hav personally vetted"
-          onClick={() => handleCardClick(props.url, 'food')}
+          onClick={() => handleCardClick(props.router, 'food')}
         />
       </CardColumn>
     </PageLayout>
   )
 }
+
+export default withRouter(Blog)

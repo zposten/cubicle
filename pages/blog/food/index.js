@@ -1,10 +1,11 @@
 import React from 'react'
+import {withRouter} from 'next/router'
 
 import {PageLayout} from 'layout'
 import {Title, Card, CardColumn} from 'components'
-import {handleCardClick} from '../../../components/blog/BlogCardList'
+import {handleCardClick} from 'components/blog/BlogCardList'
 
-export default function BlogFoodTypes(props) {
+function BlogMeals(props) {
   return (
     <PageLayout>
       <Title
@@ -16,21 +17,23 @@ export default function BlogFoodTypes(props) {
           title="Breakfast"
           src="/static/images/breakfast.jpg"
           description="The most important meal of the day"
-          onClick={() => handleCardClick(props.url, 'breakfast')}
+          onClick={() => handleCardClick(props.router, 'breakfast')}
         />
         <Card
           title="Not Breakfast"
           src="/static/images/dinner.jpg"
           description="The meal that you just can't wait to get home for"
-          onClick={() => handleCardClick(props.url, 'dinner')}
+          onClick={() => handleCardClick(props.router, 'dinner')}
         />
         <Card
           title="Sides"
           src="/static/images/sides2.jpg"
           description="The meal that's not a meal...unless you really want it to be"
-          onClick={() => handleCardClick(props.url, 'sides')}
+          onClick={() => handleCardClick(props.router, 'sides')}
         />
       </CardColumn>
     </PageLayout>
   )
 }
+
+export default withRouter(BlogMeals)

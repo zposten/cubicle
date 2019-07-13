@@ -12,17 +12,18 @@ export function BlogCardList(props) {
         subtitle="My thoughts, views, and opinions on technical and non-technical matters"
       />
       <CardColumn>
-        {props.cards.map(c => (
-          <Card
-            key={c.id}
-            src={`/static/images/${c.imageFilename}`}
-            backupSrc={'/static/images/code.png'}
-            title={c.title}
-            description={c.description}
-            onClick={() => handleCardClick(props.router, c.id)}
-            date={c.dateString}
-          />
-        ))}
+        {props.cards &&
+          props.cards.map(c => (
+            <Card
+              key={c.id}
+              src={`/static/images/${c.imageFilename}`}
+              backupSrc={'/static/images/code.png'}
+              title={c.title}
+              description={c.description}
+              onClick={() => handleCardClick(props.router, c.id)}
+              date={c.dateString}
+            />
+          ))}
       </CardColumn>
     </PageLayout>
   )

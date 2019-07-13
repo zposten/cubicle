@@ -5,10 +5,9 @@ import cards from 'content/cards'
 import {BlogCardList} from 'components/blog'
 
 function BlogMeal(props) {
-  let mealCards = cards.food[props.query.meal]
+  let meal = props.router.query.meal
+  let mealCards = meal && cards.food[meal]
   return <BlogCardList cards={mealCards} router={props.router} />
 }
-
-BlogMeal.getInitialProps = async ({query}) => ({query})
 
 export default withRouter(BlogMeal)
