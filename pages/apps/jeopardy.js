@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 
 import {PageLayout} from 'layout'
 import {Title, Column} from 'components'
-import {Gameboard} from './Gameboard'
+import {Gameboard} from 'sections/apps/jeopardy'
 
-export function Jeopardy() {
+export default function Jeopardy() {
   const [roundOneScore, setRoundOneScore] = useState(0)
   const [roundTwoScore, setRoundTwoScore] = useState(0)
 

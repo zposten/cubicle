@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 import {primaryDark} from 'general/theme'
-import {TitleBlock} from './_TitleBlock'
+import {TitleBlock} from './TitleBlock'
 
 const Wrapper = styled.div`
   display: grid;

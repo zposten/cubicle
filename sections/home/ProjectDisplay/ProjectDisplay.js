@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import {ProjectSummary} from './_ProjectSummary'
-import {TitleBlock} from '../_TitleBlock'
+import {ProjectSummary} from './ProjectSummary'
+import {TitleBlock} from '../TitleBlock'
 import {Button} from 'components'
 
 const Wrapper = styled.div`

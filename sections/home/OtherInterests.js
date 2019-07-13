@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 import Photoswipe from '@zposten/photoswipe-react'
 
-import {TitleBlock} from './_TitleBlock'
+import {TitleBlock} from './TitleBlock'
 import {primaryDark} from 'general/theme'
 import slides from 'components/photography/slides-featured'
 

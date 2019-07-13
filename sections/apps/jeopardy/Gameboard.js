@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import {CategoryRow} from './_CategoryRow'
-import {QuestionRow} from './_QuestionRow'
+import {CategoryRow} from './CategoryRow'
+import {QuestionRow} from './QuestionRow'
 
 const Table = styled.table`
   width: 100%;
