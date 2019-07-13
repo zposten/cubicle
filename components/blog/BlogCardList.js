@@ -5,13 +5,6 @@ import {Title, Card, CardColumn} from 'components'
 import {PageLayout} from 'layout'
 
 export function BlogCardList(props) {
-  function handleCardClick(id) {
-    let current = props.url.asPath
-    let destination = `${current}/${id}`
-
-    props.url.push(destination)
-  }
-
   return (
     <PageLayout>
       <Title
@@ -26,7 +19,7 @@ export function BlogCardList(props) {
             backupSrc={'/static/images/code.png'}
             title={c.title}
             description={c.description}
-            onClick={() => handleCardClick(c.id)}
+            onClick={() => handleCardClick(props.router, c.id)}
             date={c.dateString}
           />
         ))}
@@ -44,5 +37,11 @@ BlogCardList.propTypes = {
       description: PropTypes.string,
     }),
   ),
-  url: PropTypes.object,
+  router: PropTypes.object,
+}
+
+export function handleCardClick(router, id) {
+  let current = router.asPath
+  let destination = `${current}/${id}`
+  router.push(destination)
 }

@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "next dev",
     "build": "next build",
-    "postbuild": "cross-env NODE_ENV=production node server.js",
+    "postbuild": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,7 +23,7 @@
     "highlight.js": "^9.15.6",
     "isomorphic-unfetch": "^3.0.0",
     "markdown-it": "^8.4.2",
-    "next": "^7.0.2",
+    "next": "^9.0.1",
     "node-sass": "^4.11.0",
     "polished": "^2.3.3",
     "react": "16.8.3",
