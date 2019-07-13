@@ -19,13 +19,13 @@ In this post in particular, I hope to discuss what is, in my opinion, the most p
 
 ### Branches
 
-Many people think about branches in Git the wrong way. They think of branches being these heavy constructs that "contain" commits. This is understandable, because language like commits being "on a branch", or your repo being "on a branch" is common. But branches in Git are very simple. The only thing they do is point to commits. That's it. Every branch in Git is a pointer to a particular commit hash. Branches can easily be created, moved and deleted. You can `checkout` a branch, but all that really means is that when you make a commit, the branch you have "checked out" will automatically be moved forward to your newly created commit.
+Many people think about branches in Git the wrong way. They think of branches being these heavy constructs that "contain" commits. This is understandable because language like commits being "on a branch" or your repo being "on a branch" is common, and that fits with prior understanding from other version control tools. But branches in Git are very simple. The only thing they do is point to commits, that's it! Every branch in Git is a pointer to a particular commit hash, and because they're just pointers, branches can easily be created, moved and deleted. You can `checkout` a branch, but all that really means is that when you make a commit, the branch you have "checked out" will automatically be moved forward to your newly created commit.
 
 It is possible to use Git (locally, anyway) without any branches at all, but that would be extremely inconvenient and I don't recommend it. Branches serve as convenient aliases for hard to remember and at times fluid commit hashes, but they also mark which commits are important. If a commit is somewhere in the ancestry of a commit that is pointed to by a branch, then Git considers it important enough to show it in the log. Any "hanging chads", if you will, commits that are not in the ancestry of any commit pointed to by a branch (or a tag), do not show up in the log. If that language is confusing to you, don't worry, keep reading!
 
 ### HEAD
 
-Your HEAD (in Git) is like a weird kind of branch in the sense that it points to a particular commit. But unlike a branch, it cannot be deleted. That's because your HEAD represents the files that currently exist in your file system, i.e. the files that you see in your IDE. When you have a branch checked out and you run `git log`, you'll see that git shows your HEAD pointing to that branch: `HEAD -> dev`. Like I mentioned before, that just means that when you create a new commit, both your HEAD and the branch that you have checked out (`dev` in this example) will move forward to that commit.
+Your HEAD (in Git) is like a weird kind of branch in the sense that it points to a particular commit. But unlike a branch, it can't be deleted. That's because your HEAD represents the files that currently exist in your file system, i.e. the files that you see in your IDE. When you have a branch checked out and you run `git log`, you'll see that git shows your HEAD pointing to that branch: `HEAD -> dev`. Like I mentioned before, that just means that when you create a new commit, both your HEAD and the branch that you have checked out (`dev` in this example) will both move forward to that commit.
 
 > Fun fact: When using git, HEAD does not have to be capitalized. `head` and `HEAD` are absolutely equivalent
 
@@ -38,7 +38,7 @@ If the atom is the is the building block of the universe, then the commit is the
 But what _is_ a commit exactly? A Git commit is made up of three parts
 
 - The content of the commit. This is the actual source code that you're trying to store in Git by making this commit
-- A commit message. This is a description you include when you make a commit. More on this in a second
+- A commit message. This is a description you include when you make a commit.
 - A parent. This is the commit that your HEAD pointed to before making this commit. Every commit apart from the very first one in the repo (the "root commit") has a parent
 
 ## Let's take a look at the log
@@ -68,7 +68,7 @@ Date:   Fri Apr 19 09:32:08 2019 -0500
 
 Those, as you're probably aware, are your Git commits. For every commit, you're shown:
 
-- The commit hash. The SHA-256 hash of every commit in your repository will be unique. If you change anything about this commit, the hash will change. We'll talk more about this later
+- The commit hash. The SHA-256 hash of every commit in your repository will be unique. If you change any of the three pieces of the commit mentioned eariler (content, commit message, parent), the hash will change
 - The author. Specifically it shows the name and email that are set in the user's `.gitconfig` when they made the commit
 - The date the commit was made
 - The entire commit text, both summary and body
@@ -79,7 +79,7 @@ The commits are shown with the most recent at the top, and oldest at the bottom.
 
 ### Formatting the log
 
-Now we've seen the log, but in its raw form, it's not super useful most of the time. We want to use the log to see the relationships between our commits to better understand the structure of our repository. Git can generate a graph which does exactly that by adding a `--graph` flag to the `git log` command.
+Now we've seen the log. But in its raw form, it's not super useful most of the time. We want to use the log to see the relationships between our commits to better understand the structure of our repository. Git can generate a graph which does exactly that by adding a `--graph` flag to the `git log` command.
 
 ```bash
 git log --graph
