@@ -1,4 +1,3 @@
-import React from 'react'
 import {primary, secondary, secondaryDark} from './theme'
 import {createGlobalStyle} from 'styled-components'
 
@@ -17,4 +16,4 @@ export const GlobalStyles = createGlobalStyle`
       color: ${secondaryDark};
     }
   }
-  `
+`

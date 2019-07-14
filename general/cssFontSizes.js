@@ -1,4 +1,3 @@
-import React from 'react'
 import {createGlobalStyle} from 'styled-components'
 
 // Taken from: http://typecast.com/blog/a-more-modern-scale-for-web-typography
