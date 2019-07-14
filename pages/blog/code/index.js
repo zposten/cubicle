@@ -1,12 +1,11 @@
 import React from 'react'
-import {withRouter} from 'next/router'
+import {useRouter} from 'next/router'
 
 import cards from 'content/cards'
 import {BlogCardList} from 'sections/blog'
 
-function BlogCode(props) {
+export default function BlogCode() {
+  const router = useRouter()
   let codeCards = cards.code
-  return <BlogCardList cards={codeCards} router={props.router} />
+  return <BlogCardList cards={codeCards} router={router} />
 }
-
-export default withRouter(BlogCode)
