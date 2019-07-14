@@ -66,20 +66,29 @@ export const ProjectDisplay = () => (
           <div>
             I've done a considerable amount of open source work over the years.
             I have contributed to notable libraries including &nbsp;
-            <a href="https://github.com/Azure/azure-iot-sdk-csharp">
+            <a
+              href="https://github.com/Azure/azure-iot-sdk-csharp"
+              target="_blank"
+            >
               Microsoft's C# Azure IoT SDK
             </a>
             , as well as the prominent &nbsp;
-            <a href="https://github.com/zposten/DefinitelyTyped">
+            <a
+              href="https://github.com/zposten/DefinitelyTyped"
+              target="_blank"
+            >
               Definitely typed repo
             </a>
             . Additionally, I've published &nbsp;
-            <a href="https://userstyles.org/styles/130371/google-calendar-dark-theme">
+            <a
+              href="https://userstyles.org/styles/130371/google-calendar-dark-theme"
+              target="_blank"
+            >
               CSS themes
             </a>{' '}
             that have been &nbsp; downloaded thousands of times, as well as a
             &nbsp;
-            <a href="https://github.com/zposten/catalyst">
+            <a href="https://github.com/zposten/catalyst" target="_blank">
               React/Typescript starter kit
             </a>
             .

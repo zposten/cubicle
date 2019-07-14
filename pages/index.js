@@ -8,6 +8,7 @@ import {
   Technologies,
   OtherInterests,
   Jumbotron,
+  DesignCredit,
 } from 'sections/home'
 
 export default class Index extends React.Component {
@@ -20,6 +21,7 @@ export default class Index extends React.Component {
         <ProjectDisplay />
         <Technologies />
         <OtherInterests />
+        <DesignCredit />
       </Layout>
     )
   }
