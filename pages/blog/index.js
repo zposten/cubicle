@@ -1,9 +1,9 @@
 import React from 'react'
 import {withRouter} from 'next/router'
 
-import {PageLayout} from 'layout'
+import {PageLayout} from 'components/layout'
 import {Title, Card, CardColumn} from 'components'
-import {handleCardClick} from 'components/blog'
+import {handleCardClick} from 'sections/blog'
 
 function Blog(props) {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {PageLayout} from 'layout'
+import {PageLayout} from 'components/layout'
 import {Card, CardColumn, Title} from 'components'
 
 export default function Apps(props) {

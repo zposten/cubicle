@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
+import {NeonText} from 'components'
 import {secondary, secondaryDark} from 'general/theme'
 import {GithubIcon, TwitterIcon, LinkedInIcon} from 'general/socialNetworkIcons'
-import {NeonText} from './NeonText'
 
 const DropShadow = styled.div`
   filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.5));

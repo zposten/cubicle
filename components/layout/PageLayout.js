@@ -3,9 +3,8 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import {primary} from 'general/theme'
 import {Layout} from './'
-import {Navigation, Card, CardColumn, Title} from 'components'
+import {Navigation} from 'components'
 
 const Wrapper = styled.div`
   position: relative;

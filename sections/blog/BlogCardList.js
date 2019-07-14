@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import {Title, Card, CardColumn} from 'components'
-import {PageLayout} from 'layout'
+import {PageLayout} from 'components/layout'
 
 export function BlogCardList(props) {
   return (

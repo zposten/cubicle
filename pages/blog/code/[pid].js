@@ -2,7 +2,7 @@ import React from 'react'
 import {withRouter} from 'next/router'
 
 import cards from 'content/cards'
-import {BlogPost} from 'components/blog'
+import {BlogPost} from 'sections/blog'
 
 function BlogCodePost(props) {
   let postId = props.router.query.pid

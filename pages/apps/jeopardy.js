@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import {PageLayout} from 'layout'
+import {PageLayout} from 'components/layout'
 import {Title, Column} from 'components'
 import {Gameboard} from 'sections/apps/jeopardy'
 

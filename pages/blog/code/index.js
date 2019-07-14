@@ -2,7 +2,7 @@ import React from 'react'
 import {withRouter} from 'next/router'
 
 import cards from 'content/cards'
-import {BlogCardList} from 'components/blog'
+import {BlogCardList} from 'sections/blog'
 
 function BlogCode(props) {
   let codeCards = cards.code

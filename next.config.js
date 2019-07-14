@@ -20,7 +20,7 @@ function configureWebpack(config) {
           test: /\.md$/,
           loader: path.resolve(
             __dirname,
-            './config/webpack-markdown-loader.js',
+            './general/webpack-markdown-loader.js',
           ),
         },
       ],

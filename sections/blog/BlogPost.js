@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 import {Title} from 'components'
-import {PageLayout} from 'layout'
+import {PageLayout} from 'components/layout'
 import {Markdown} from 'components/Markdown'
 
 const BlogImage = styled.div`

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import {PacmanLoader} from 'react-spinners'
 
-import {PageLayout} from 'layout'
+import {PageLayout} from 'components/layout'
 import {Title, Button, Textbox, Column} from 'components'
 import {useQuestionMask} from 'sections/apps/google'
 import {secondary} from 'general/theme'
