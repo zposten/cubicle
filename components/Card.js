@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
 import {lighten} from 'polished'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import {useRouter} from 'next/router'
@@ -15,7 +16,8 @@ const MyButtonBase = styled(ButtonBase)`
 const Wrapper = styled(MyButtonBase)`
   background-color: ${lighten(0.05, primary)} !important;
   display: grid !important;
-  grid-template-columns: [pic] 1fr [text] 1fr;
+  grid-template-rows: [pic] 1fr [text] 1fr;
+  grid-template-areas: 'pic' 'text';
   width: 100%;
   overflow: hidden;
   cursor: pointer;
@@ -30,12 +32,17 @@ const Wrapper = styled(MyButtonBase)`
   &:hover {
     transform: translate(10px, -10px);
     background-color: ${lighten(0.1, primary)};
-    ${'' /* box-shadow: -5px 5px 20px 2px ${lighten(0.2, primary)}; */}
   }
+
+  ${breakpoint('sm')`
+    grid-template-rows: 1fr;
+    grid-template-columns: [pic] 1fr [text] 1fr;
+    grid-template-areas: "pic text";
+  `}
 `
 
 const Image = styled.div`
-  grid-column: pic;
+  grid-area: pic;
   height: 100%;
   width: 100%;
   place-self: ${p => (p.flip ? 'end' : 'start')};
@@ -46,7 +53,7 @@ const Image = styled.div`
 `
 
 const TextWrapper = styled.div`
-  grid-column: text;
+  grid-area: text;
   display: grid;
   grid-template-rows: [title] auto [description] 1fr;
   grid-gap: 20px;
