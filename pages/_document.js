@@ -11,8 +11,15 @@ export default class MyDocument extends Document {
     const sheet = new ServerStyleSheet()
 
     // Step 2: Retrieve styles from components in the page
+    // while simultaneously injecting the global styles
     const page = renderPage(App => props =>
-      sheet.collectStyles(<App {...props} />),
+      sheet.collectStyles(
+        <>
+          <CssFontSizes />
+          <GlobalStyles />
+          <App {...props} />
+        </>,
+      ),
     )
 
     // Step 3: Extract the styles as <style> tags
@@ -36,9 +43,6 @@ export default class MyDocument extends Document {
           <link href="/static/qtcreator_dark.css" rel="stylesheet" />
         </Head>
         <body>
-          <CssFontSizes />
-          <GlobalStyles />
-
           <Main />
           <NextScript />
         </body>

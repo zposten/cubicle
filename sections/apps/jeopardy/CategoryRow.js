@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import {CategoryTile} from './_CategoryTile'
-import {jeopardyColor} from './_QuestionTile'
+import {CategoryTile} from './CategoryTile'
+import {jeopardyColor} from './QuestionTile'
 
 export function CategoryRow(props) {
   let cols = []

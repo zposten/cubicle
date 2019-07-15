@@ -5,6 +5,11 @@ import * as potRoast from './recipe-guinness-pot-roast.md'
 import * as tacoPasta from './recipe-one-pot-taco-pasta.md'
 import * as pizza from './recipe-pizza.md'
 
-export const dinner = {
-  default: [bbqChicken, chickenAndRice, goulash, potRoast, tacoPasta, pizza],
-}
+export const dinner = [
+  bbqChicken,
+  chickenAndRice,
+  goulash,
+  potRoast,
+  tacoPasta,
+  pizza,
+]

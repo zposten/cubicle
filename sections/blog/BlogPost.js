@@ -3,25 +3,14 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import {traverseObject} from 'general/util'
-import cards from 'content/cards'
-import {Title, Card, CardColumn} from 'components'
-import {PageLayout} from 'layout'
+import {Title} from 'components'
+import {PageLayout} from 'components/layout'
 import {Markdown} from 'components/Markdown'
 
-export function generateBlogPostDefinition(slug) {
-  let path = slug.split('/')
-  let blogId = path.pop()
-
-  let definitionObject = traverseObject(cards, path)
-  let siblings = definitionObject.default
-  let blogPost = siblings.filter(sibling => sibling.id === blogId)[0]
-  return {blogPost}
-}
-
 const BlogImage = styled.div`
-  background-image: url('/static/images/${p =>
-    p.src}'), url('/static/images/code.png');
+  background-image: 
+    url('/static/images/${p => p.src}'), 
+    url('/static/images/code.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -43,9 +32,13 @@ export function BlogPost(props) {
 
   return (
     <PageLayout>
-      <Title title={post.title} subtitle={post.description} />
-      <BlogImage src={post.imageFilename} />
-      <Markdown html={post.html} />
+      {post && (
+        <>
+          <Title title={post.title} subtitle={post.description} />
+          <BlogImage src={post.imageFilename} />
+          <Markdown html={post.html} />
+        </>
+      )}
     </PageLayout>
   )
 }

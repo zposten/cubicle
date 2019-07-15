@@ -66,6 +66,7 @@ const Label = styled.label`
   top: ${(totalHeight - labelHeight) / 2}px;
   left: 10px;
   transition: all 0.5s;
+  pointer-events: none;
 `
 
 export function Textbox(props) {

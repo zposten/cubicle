@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import {QuestionTile} from './_QuestionTile'
+import {QuestionTile} from './QuestionTile'
 
 /**
  * This is a row that contains multiple cells, all of which

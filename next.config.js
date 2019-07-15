@@ -11,6 +11,7 @@ function configureWebpack(config) {
         layout: path.join(__dirname, 'layout'),
         general: path.join(__dirname, 'general'),
         content: path.join(__dirname, 'content'),
+        sections: path.join(__dirname, 'sections'),
       },
     },
     module: {
@@ -19,7 +20,7 @@ function configureWebpack(config) {
           test: /\.md$/,
           loader: path.resolve(
             __dirname,
-            './config/webpack-markdown-loader.js',
+            './general/webpack-markdown-loader.js',
           ),
         },
       ],

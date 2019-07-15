@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import {lighten} from 'polished'
 import ButtonBase from '@material-ui/core/ButtonBase'
-import {withRouter} from 'next/router'
+import {useRouter} from 'next/router'
 
 import {primary} from 'general/theme'
 
@@ -80,18 +80,9 @@ const Info = styled.div`
   opacity: 0.6;
 `
 
-function Card(props) {
-  let {
-    height,
-    src,
-    backupSrc,
-    title,
-    description,
-    id,
-    onClick,
-    router,
-    ...rest
-  } = props
+export function Card(props) {
+  const router = useRouter()
+  let {height, src, backupSrc, title, description, id, onClick, ...rest} = props
 
   /* If no onClick handler is passed, and an id is explicitly
    * passed, then automatically append that id to the url when
@@ -131,8 +122,4 @@ Card.propTypes = {
   height: PropTypes.string,
   date: PropTypes.string,
   id: PropTypes.string,
-  router: PropTypes.object.isRequired,
 }
-
-const cardWithRouter = withRouter(Card)
-export {cardWithRouter as Card}
