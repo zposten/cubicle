@@ -41,6 +41,11 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link href="/static/qtcreator_dark.css" rel="stylesheet" />
+          <link
+            rel="icon"
+            type="image/x-icon"
+            href="/static/images/favicon.ico"
+          />
         </Head>
         <body>
           <Main />
