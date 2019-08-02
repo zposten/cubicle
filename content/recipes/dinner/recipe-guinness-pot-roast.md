@@ -2,7 +2,7 @@
 title: Guiness Gravy Pot Roast
 description: As made famous by County Claire!
 imageFilename: pot-roast.jpg
-id: potRoast
+id: guinness-pot-roast
 ---
 
 [Original Recipe](http://www.thespicehouse.com/recipes/grandma-flanigans-pot--roast-in-guinness-gravy-recipe)

@@ -2,7 +2,7 @@
 title: One Pot Taco Pasta
 description: You like tacos and you like pasta, what's not to love?
 imageFilename: taco-pasta.jpg
-id: tacoPasta
+id: one-pot-taco-pasta
 ---
 
 #
