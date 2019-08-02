@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   font-size: 1em;
   cursor: pointer;
   outline: none;
+  position: relative;
 
   ${p => ripple(p.theme.colors[p.zach || 'secondary'])}
 
@@ -29,7 +30,7 @@ const Wrapper = styled.div`
 `
 
 const Input = styled.input`
-  display: hidden;
+  visibility: hidden;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -42,7 +43,7 @@ const Input = styled.input`
 
 export function Button(props) {
   return (
-    <Wrapper {...props} tabindex="1">
+    <Wrapper {...props} tabIndex="1">
       <Input
         type="button"
         disabled={props.isDisabled}
