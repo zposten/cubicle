@@ -1,5 +1,6 @@
 import React from 'react'
 import {useRouter} from 'next/router'
+import Head from 'next/head'
 
 import {PageLayout} from 'components/layout'
 import {Title, Card, CardColumn} from 'components'
@@ -10,6 +11,9 @@ export default function BlogMeals() {
 
   return (
     <PageLayout>
+      <Head>
+        <title>Zach's Recipes!</title>
+      </Head>
       <Title
         title="Recipes"
         subtitle="Delicious concoctions that I have personally vetted"

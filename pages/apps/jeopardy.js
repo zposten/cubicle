@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Head from 'next/head'
 
 import {PageLayout} from 'components/layout'
 import {Title, Column} from 'components'
@@ -16,6 +17,9 @@ export default function Jeopardy() {
 
   return (
     <PageLayout>
+      <Head>
+        <title>Jeopardy</title>
+      </Head>
       <Title
         title="Jeopardy"
         subtitle="A tool for keeping track of your score while you watch Jeopardy"

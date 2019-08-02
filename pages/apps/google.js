@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Head from 'next/head'
 import styled from 'styled-components'
 import {PacmanLoader} from 'react-spinners'
 
@@ -77,6 +78,9 @@ export default function GoogleAnswers() {
 
   return (
     <PageLayout>
+      <Head>
+        <title>Google mainframe access</title>
+      </Head>
       <Title
         title="Google mainframe access"
         subtitle="Prepare to be shocked and appalled"

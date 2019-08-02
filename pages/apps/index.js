@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 
 import {PageLayout} from 'components/layout'
 import {Card, CardColumn, Title} from 'components'
@@ -6,6 +7,9 @@ import {Card, CardColumn, Title} from 'components'
 export default function Apps(props) {
   return (
     <PageLayout>
+      <Head>
+        <title>Apps</title>
+      </Head>
       <Title title="Apps" subtitle="Fun little bits of code" />
       <CardColumn>
         {/* <Card

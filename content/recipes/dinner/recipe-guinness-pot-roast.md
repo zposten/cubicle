@@ -38,7 +38,7 @@ This recipe should make 4-6 servings.
 1. Pour the Guinness into a bowl and set it aside so that the beer flattens
 1. Rub the roast with the rib rub seasoning
 1. Heat the vegetable oil in a large non-stick pan over medium-high heat
-1. Sear the roast on each side. Once browned, _immediately_ remove the meat from the pan and set it in a large roasting pan
+1. Sear the roast on each side. Once browned, immediately remove the meat from the pan and set it in a large roasting pan
 1. Add the onions, garlic and beef stock to the roasting pan
 1. Cook the roast in the oven for an hour
 
