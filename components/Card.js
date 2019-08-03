@@ -18,6 +18,7 @@ const Wrapper = styled(MyButtonBase)`
   display: grid !important;
   grid-template-rows: [pic] 1fr [text] 1fr;
   grid-template-areas: 'pic' 'text';
+  justify-content: stretch !important;
   width: 100%;
   overflow: hidden;
   cursor: pointer;
