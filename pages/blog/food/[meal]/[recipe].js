@@ -1,5 +1,6 @@
 import React from 'react'
 import {useRouter} from 'next/router'
+import Head from 'next/head'
 
 import cards from 'content/cards'
 import {BlogPost} from 'sections/blog'
@@ -15,5 +16,10 @@ export default function BlogRecipe() {
     recipeId &&
     recipesForMeal.filter(r => r.id === recipeId)[0]
 
-  return <BlogPost post={recipe} />
+  return (
+    <>
+      <Head>{recipe && <title>{recipe.title}</title>}</Head>
+      <BlogPost post={recipe} />
+    </>
+  )
 }

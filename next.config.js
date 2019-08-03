@@ -1,6 +1,7 @@
 /* eslint-disable */
 const path = require('path')
 const merge = require('webpack-merge')
+const generateBlogExportPathMap = require('./general/generateBlogExportPathMap')
 
 function configureWebpack(config) {
   return merge(config, {
@@ -28,6 +29,16 @@ function configureWebpack(config) {
   })
 }
 
-let webpack = {webpack: configureWebpack}
-// let css = withCss(webpack)
-module.exports = webpack
+async function exportPathMap(
+  defaultPathMap,
+  {dev, dir, outDir, distDir, buildId},
+) {
+  return {
+    ...defaultPathMap,
+    ...generateBlogExportPathMap(),
+  }
+}
+
+let config = {webpack: configureWebpack, exportPathMap}
+// let css = withCss(config)
+module.exports = config

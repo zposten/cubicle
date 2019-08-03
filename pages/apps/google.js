@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Head from 'next/head'
 import styled from 'styled-components'
 import {PacmanLoader} from 'react-spinners'
 
@@ -75,8 +76,19 @@ export default function GoogleAnswers() {
     setShouldRevealAnswer(false)
   }
 
+  let answerText = shouldRevealAnswer
+    ? secret || 'Google could not authenticate you at this time'
+    : petitionError
+    ? 'You must identify yourself to Google'
+    : questionError
+    ? 'If answers you seek, questions you must ask'
+    : undefined
+
   return (
     <PageLayout>
+      <Head>
+        <title>Google mainframe access</title>
+      </Head>
       <Title
         title="Google mainframe access"
         subtitle="Prepare to be shocked and appalled"
@@ -120,12 +132,7 @@ export default function GoogleAnswers() {
               : 'Query Google'}
           </Button>
 
-          <AnswerText>
-            {shouldRevealAnswer &&
-              (secret || 'Google could not authenticate you at this time')}
-            {petitionError && 'You must identify yourself to Google'}
-            {questionError && 'If answers you seek, questions you must ask'}
-          </AnswerText>
+          <AnswerText>{answerText}</AnswerText>
         </Wrapper>
       </Column>
     </PageLayout>

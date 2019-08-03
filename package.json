@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "next dev",
-    "build": "next build",
-    "postbuild": "next start",
+    "build": "next build && next export",
+    "serve": "serve out",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -37,7 +37,9 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.13.0",
     "eslint-plugin-react": "^7.12.4",
+    "fs-extra": "^8.1.0",
     "prettier": "^1.16.4",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "serve": "^11.1.0"
   }
 }

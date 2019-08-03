@@ -2,7 +2,7 @@
 title: Perfect Mashed Potatoes
 description: You've had mashed potatoes, but you've never had THESE mashed potatoes
 imageFilename: mashed-potatoes.jpg
-id: mashedPotatoes
+id: mashed-potatoes
 ---
 
 [Original Recipe](http://thepioneerwoman.com/cooking/delicious_creamy_mashed_potatoes/)
