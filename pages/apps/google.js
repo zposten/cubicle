@@ -76,6 +76,14 @@ export default function GoogleAnswers() {
     setShouldRevealAnswer(false)
   }
 
+  let answerText = shouldRevealAnswer
+    ? secret || 'Google could not authenticate you at this time'
+    : petitionError
+    ? 'You must identify yourself to Google'
+    : questionError
+    ? 'If answers you seek, questions you must ask'
+    : undefined
+
   return (
     <PageLayout>
       <Head>
@@ -124,12 +132,7 @@ export default function GoogleAnswers() {
               : 'Query Google'}
           </Button>
 
-          <AnswerText>
-            {shouldRevealAnswer &&
-              (secret || 'Google could not authenticate you at this time')}
-            {petitionError && 'You must identify yourself to Google'}
-            {questionError && 'If answers you seek, questions you must ask'}
-          </AnswerText>
+          <AnswerText>{answerText}</AnswerText>
         </Wrapper>
       </Column>
     </PageLayout>
