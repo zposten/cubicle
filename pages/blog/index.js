@@ -17,7 +17,7 @@ export default function Blog() {
       <Title title="Blog" />
       <CardColumn>
         <Card
-          title="Programming"
+          title="Technology"
           src="/static/images/code.png"
           description="Things I've learned while coding away"
           onClick={() => handleCardClick(router, 'code')}
