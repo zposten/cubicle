@@ -16,7 +16,7 @@ const MyButtonBase = styled(ButtonBase)`
 const Wrapper = styled(MyButtonBase)`
   background-color: ${lighten(0.05, primary)} !important;
   display: grid !important;
-  grid-template-rows: [pic] 1fr [text] 1fr;
+  grid-template-rows: [pic] 1fr [text] auto;
   grid-template-areas: 'pic' 'text';
   justify-content: stretch !important;
   width: 100%;
@@ -25,7 +25,6 @@ const Wrapper = styled(MyButtonBase)`
   position: relative;
   border: 5px;
   max-width: 700px;
-  height: 350px;
 
   transition: 0.1s ease-in;
 
@@ -38,13 +37,12 @@ const Wrapper = styled(MyButtonBase)`
     grid-template-rows: 1fr;
     grid-template-columns: [pic] 1fr [text] 1fr;
     grid-template-areas: "pic text";
-    height: 250px;
+    min-height: 250px;
   `}
 `
 
 const Image = styled.div`
   grid-area: pic;
-  height: 100%;
   width: 100%;
   place-self: ${p => (p.flip ? 'end' : 'start')};
   background-image: url(${p => p.src})
@@ -52,6 +50,11 @@ const Image = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 200px;
+
+  ${breakpoint('sm')`
+    height: 100%;
+  `}
 `
 
 const TextWrapper = styled.div`
@@ -59,7 +62,9 @@ const TextWrapper = styled.div`
   display: grid;
   grid-template-rows: [title] auto [description] 1fr;
   grid-gap: 20px;
-  margin: auto;
+  padding-top: 16px;
+  /* Bottom padding is larger to account for the date */
+  padding-bottom: 40px;
 `
 
 const Title = styled.h4`
