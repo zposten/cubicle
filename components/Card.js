@@ -22,11 +22,10 @@ const Wrapper = styled(MyButtonBase)`
   width: 100%;
   overflow: hidden;
   cursor: pointer;
-  height: ${props => props.height || 'auto'};
   position: relative;
   border: 5px;
   max-width: 700px;
-  height: 250px;
+  height: 350px;
 
   transition: 0.1s ease-in;
 
@@ -39,6 +38,7 @@ const Wrapper = styled(MyButtonBase)`
     grid-template-rows: 1fr;
     grid-template-columns: [pic] 1fr [text] 1fr;
     grid-template-areas: "pic text";
+    height: 250px;
   `}
 `
 
@@ -51,6 +51,7 @@ const Image = styled.div`
     ${p => p.backupSrc && `, url("${p.backupSrc}")`};
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 `
 
 const TextWrapper = styled.div`
@@ -109,7 +110,7 @@ export function Card(props) {
   }
 
   return (
-    <Wrapper height={height} component="div" onClick={handleClick} {...rest}>
+    <Wrapper component="div" onClick={handleClick} {...rest}>
       <Image src={src} backupSrc={backupSrc} />
       <TextWrapper>
         <Title>{title}</Title>
@@ -127,7 +128,6 @@ Card.propTypes = {
   backupSrc: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
-  height: PropTypes.string,
   date: PropTypes.string,
   id: PropTypes.string,
 }
