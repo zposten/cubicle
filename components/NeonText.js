@@ -21,6 +21,7 @@ export const NeonText = styled.h1`
   margin-bottom: 10px;
   font-size: 4em;
   cursor: default;
+  text-align: center;
 
   &.hover, &:hover {
     animation: 
