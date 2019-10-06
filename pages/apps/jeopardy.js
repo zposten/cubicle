@@ -20,10 +20,10 @@ export default function Jeopardy() {
       <Head>
         <title>Jeopardy</title>
       </Head>
-      <Title title="Jeopardy" />
+      <Title title="Jeopardy Calculator" />
       <Column>
         <p>
-          Type your categories in the top bar and play along as you watch!
+          Type your categories in the top row and play along as you watch!
           <ul>
             <li>
               <b>One click:</b> Did not answer the question
@@ -40,7 +40,7 @@ export default function Jeopardy() {
           </ul>
         </p>
 
-        <h1>Jeopardy</h1>
+        <h1>Jeopardy round</h1>
         <Gameboard
           values={[200, 400, 600, 800, 1000]}
           colCount={6}
@@ -50,7 +50,7 @@ export default function Jeopardy() {
         <p>Total for jeopardy round: ${roundOneScore}</p>
         <br />
         <br />
-        <h1>Double Jeopardy</h1>
+        <h1>Double Jeopardy round</h1>
         <Gameboard
           values={[400, 800, 1200, 1600, 2000]}
           colCount={6}
