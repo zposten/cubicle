@@ -1,10 +1,10 @@
 ---
 title: What's the best way to create a UI in iOS?
-description: It has been mentioned that there are three completely different ways to create a UI for an iOS app.  What are the advantages and disadvantages of each, and is there a particular one which the community prefers?
+description: There are at least three completely different ways to create a UI for an iOS app.  What are the advantages and disadvantages of each, and is there a particular one which the community prefers?
 author: Zach Posten
 date: 2015-3-18
 tags: ios, ui
-id: ios-ui-creation
+id: ios-ui-creation-methods
 ---
 
 ## Context

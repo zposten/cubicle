@@ -4,7 +4,7 @@ description: My struggles with a seemingly simple task
 author: Zach Posten
 date: 2016-3-2
 tags: git
-id: 'git-move'
+id: git-move
 ---
 
 ## Branches are just pointers

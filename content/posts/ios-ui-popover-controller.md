@@ -4,7 +4,7 @@ description: What is a UIPopoverController and when should you use it?
 author: Zach Posten
 date: 2015-4-22
 tags: ios, ui
-id: ios-popover
+id: ios-ui-popover-controller
 ---
 
 ## Context

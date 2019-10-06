@@ -4,7 +4,7 @@ description: What are the three most common letters you type when using git?  'g
 author: Zach Posten
 date: 2017-2-20
 tags: git, efficiency
-id: 'git-map-to-k'
+id: git-map-to-k
 ---
 
 ## Efficiency
