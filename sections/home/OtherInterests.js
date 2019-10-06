@@ -50,7 +50,7 @@ export const OtherInterests = () => (
         Also, as you might have guessed from my website, I enjoy solving Rubik's
         cubes...quickly. I have solved cubes from a 2x2 all the way up to a 7x7,
         but my fastest remains the standard 3x3 cube, which I have solved in a
-        mere 14 seconds,
+        mere 14 seconds.
       </Text>
     </TextWrapper>
     <StyledPhotoswipe slides={slides} galleryId={0} />

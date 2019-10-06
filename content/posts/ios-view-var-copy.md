@@ -4,7 +4,7 @@ description: Inside of a view controller, how do I initialize one variable to th
 author: Zach Posten
 date: 2015-5-6
 tags: ios, ui
-id: ios-var-copy
+id: ios-view-var-copy
 ---
 
 ## Context

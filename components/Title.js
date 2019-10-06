@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import {secondary} from 'general/theme'
-import {TextColumn} from 'components'
+import {TextColumn} from './TextColumn'
 
 const Wrapper = styled.div`
   display: flex;

@@ -17,7 +17,8 @@ const BlogImage = styled.div`
   width: 100vw;
   height: 400px;
   margin-bottom: 30px;
-
+  max-width: 900px;
+  
   ${breakpoint('sm')`
     width: 100%;
   `}

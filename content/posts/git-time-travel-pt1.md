@@ -5,7 +5,7 @@ description: This post is part one of what I hope to be a comprehensive explanat
 author: Zach Posten
 date: 2019-5-3
 tags: git
-id: 'git-time-travel-pt1'
+id: git-time-travel-pt1
 imageFilename: git-warp.png
 ---
 

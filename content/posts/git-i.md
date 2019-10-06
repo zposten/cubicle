@@ -4,7 +4,7 @@ description: Do you find yourself running "git rebase -i head~n" a lot?
 author: Zach Posten
 date: 2017-5-11
 tags: git, efficiency
-id: 'git-i'
+id: git-i
 ---
 
 ## Background

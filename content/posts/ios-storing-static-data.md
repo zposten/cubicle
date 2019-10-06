@@ -4,7 +4,7 @@ description: Often when building an application, static data is required for som
 author: Zach Posten
 date: 2015-4-15
 tags: ios
-id: ios-static-data
+id: ios-storing-static-data
 ---
 
 ## Context
