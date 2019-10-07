@@ -8,9 +8,8 @@ import {PageLayout} from 'components/layout'
 import {Markdown} from 'components/Markdown'
 
 const BlogImage = styled.div`
-  background-image: 
-    url('/static/images/${p => p.src}'), 
-    url('/static/images/code.png');
+  background-image: url(${p => require('static/images/' + p.src)}),
+    url(${p => require('static/images/code.png')});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -18,7 +17,7 @@ const BlogImage = styled.div`
   height: 400px;
   margin-bottom: 30px;
   max-width: 900px;
-  
+
   ${breakpoint('sm')`
     width: 100%;
   `}

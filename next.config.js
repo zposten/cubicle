@@ -1,4 +1,9 @@
 /* eslint-disable */
+
+///////////////////////////////////////
+// NEXT CONFIG
+///////////////////////////////////////
+
 const path = require('path')
 const merge = require('webpack-merge')
 const generateBlogExportPathMap = require('./general/generateBlogExportPathMap')
@@ -13,6 +18,7 @@ function configureWebpack(config) {
         general: path.join(__dirname, 'general'),
         content: path.join(__dirname, 'content'),
         sections: path.join(__dirname, 'sections'),
+        static: path.join(__dirname, 'static'),
       },
     },
     module: {
@@ -39,6 +45,25 @@ async function exportPathMap(
   }
 }
 
-let config = {webpack: configureWebpack, exportPathMap}
-// let css = withCss(config)
-module.exports = config
+let nextConfig = {webpack: configureWebpack, exportPathMap}
+
+///////////////////////////////////////
+// NEXT PLUGINS
+///////////////////////////////////////
+
+const withPlugins = require('next-compose-plugins')
+const optimizedImages = require('next-optimized-images')
+
+module.exports = withPlugins(
+  [
+    [
+      optimizedImages,
+      {
+        /* config for next-optimized-images */
+      },
+    ],
+
+    // your other plugins here
+  ],
+  nextConfig,
+)

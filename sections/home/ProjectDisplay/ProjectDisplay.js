@@ -40,7 +40,7 @@ export const ProjectDisplay = () => (
     <TitleBlock>Work I've done</TitleBlock>
     <Summaries>
       <ProjectSummary
-        src="/static/images/glas.jpg"
+        src={require('static/images/glas.jpg')}
         title="GLAS by Johnson Controls"
         description={`
       I worked on developing the user interface, defining the architecture, 
@@ -49,7 +49,7 @@ export const ProjectDisplay = () => (
     `}
       />
       <ProjectSummary
-        src="/static/images/nurse.png"
+        src={require('static/images/nurse.png')}
         title="Nurse Management System for Eversana"
         description={`
       I developed the front end of a nurse management system that allows coordinators 
@@ -59,7 +59,7 @@ export const ProjectDisplay = () => (
     `}
       />
       <ProjectSummary
-        src="/static/images/github.svg"
+        src={require('static/images/github.svg')}
         invert={true}
         title="Open source contributions"
         description={
