@@ -95,7 +95,7 @@ export function Jumbotron() {
   return (
     <DropShadow>
       <Wrapper>
-        <Cube src="/static/images/cube.png" />
+        <Cube src={require('static/images/cube.png')} />
         <Content>
           <NeonText>ZACH POSTEN</NeonText>
           <Line />

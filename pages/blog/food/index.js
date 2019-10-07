@@ -21,19 +21,19 @@ export default function BlogMeals() {
       <CardColumn>
         <Card
           title="Breakfast"
-          src="/static/images/breakfast.jpg"
+          src={require('static/images/breakfast.jpg')}
           description="The most important meal of the day"
           onClick={() => handleCardClick(router, 'breakfast')}
         />
         <Card
           title="Not Breakfast"
-          src="/static/images/dinner.jpg"
+          src={require('static/images/dinner.jpg')}
           description="The meal that you just can't wait to get home for"
           onClick={() => handleCardClick(router, 'dinner')}
         />
         <Card
           title="Sides"
-          src="/static/images/sides2.jpg"
+          src={require('static/images/sides2.jpg')}
           description="The meal that's not a meal...unless you really want it to be"
           onClick={() => handleCardClick(router, 'sides')}
         />

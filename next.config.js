@@ -18,6 +18,7 @@ function configureWebpack(config) {
         general: path.join(__dirname, 'general'),
         content: path.join(__dirname, 'content'),
         sections: path.join(__dirname, 'sections'),
+        static: path.join(__dirname, 'static'),
       },
     },
     module: {

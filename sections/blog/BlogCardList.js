@@ -18,8 +18,10 @@ export function BlogCardList(props) {
           props.cards.map(c => (
             <Card
               key={c.id}
-              src={`/static/images/${c.imageFilename}`}
-              backupSrc={'/static/images/code.png'}
+              src={
+                c.imageFilename && require(`static/images/${c.imageFilename}`)
+              }
+              backupSrc={require('static/images/code.png')}
               title={c.title}
               description={c.description}
               onClick={() => handleCardClick(router, c.id)}

@@ -18,13 +18,13 @@ export default function Blog() {
       <CardColumn>
         <Card
           title="Technology"
-          src="/static/images/code.png"
+          src={require('static/images/code.png')}
           description="Things I've learned while coding away"
           onClick={() => handleCardClick(router, 'code')}
         />
         <Card
           title="Recipes"
-          src="/static/images/ingredients.jpg"
+          src={require('static/images/ingredients.jpg')}
           description="Delicious concoctions that I hav personally vetted"
           onClick={() => handleCardClick(router, 'food')}
         />
