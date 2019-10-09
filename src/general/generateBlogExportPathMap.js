@@ -34,7 +34,7 @@ const path = require('path')
  */
 module.exports = function generateBlogExportPathMap() {
   const codePostMaps = generatePathMaps({
-    postIds: getMdFilenamesWithExt('../content/posts'),
+    postIds: getMdFilenamesWithExt('../../content/posts'),
     browserPath: '/blog/code',
     pagePath: '/blog/code/[pid]',
   })
@@ -103,7 +103,7 @@ function generateRecipePathMaps() {
     // is used to generate the links, whereas the filename is used here
     // to generate the proper static HTML pages
     const recipePostIds = getMdFilenamesWithExt(
-      `../content/recipes/${mealName}`,
+      `../../content/recipes/${mealName}`,
     ).map(mapRecipeFilleNameToId)
 
     const mapToEachMealRecipe = generatePathMaps({
