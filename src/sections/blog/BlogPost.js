@@ -7,9 +7,20 @@ import {Title} from 'components'
 import {PageLayout} from 'components/layout'
 import {Markdown} from 'components/Markdown'
 
+function getImage(imageName) {
+  if (imageName) {
+    try {
+      return require(`static/images/${imageName}`)
+    } catch {
+      // If the image path is invalid, just use the default image below
+    }
+  }
+
+  return require('static/images/code.png')
+}
+
 const BlogImage = styled.div`
-  background-image: url(${p => require('static/images/' + p.src)}),
-    url(${p => require('static/images/code.png')});
+  background-image: url(${p => getImage(p.src)}), url(${p => getImage()});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
