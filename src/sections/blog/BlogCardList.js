@@ -22,7 +22,7 @@ export function BlogCardList(props) {
               title={c.title}
               description={c.description}
               onClick={() => handleCardClick(router, c.id)}
-              date={c.dateString}
+              date={props.showDate && c.dateString}
             />
           ))}
       </CardColumn>
@@ -39,6 +39,11 @@ BlogCardList.propTypes = {
       description: PropTypes.string,
     }),
   ),
+  showDate: PropTypes.bool,
+}
+
+BlogCardList.defaultProps = {
+  showDate: true,
 }
 
 export function handleCardClick(router, id) {

@@ -34,7 +34,12 @@ const path = require('path')
  */
 module.exports = function generateBlogExportPathMap() {
   const codePostMaps = generatePathMaps({
-    postIds: getMdFilenamesWithExt('../../content/posts'),
+    postIds: [
+      ...getMdFilenamesWithExt('../../content/posts'),
+      ...getMdFilenamesWithExt('../../content/posts/git'),
+      ...getMdFilenamesWithExt('../../content/posts/ios'),
+      ...getMdFilenamesWithExt('../../content/posts/security'),
+    ],
     browserPath: '/blog/code',
     pagePath: '/blog/code/[pid]',
   })

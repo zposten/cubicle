@@ -2,6 +2,7 @@
 title: Guiness Gravy Pot Roast
 description: As made famous by County Claire!
 imageFilename: pot-roast.jpg
+date: 2018-01-01
 id: guinness-pot-roast
 ---
 
