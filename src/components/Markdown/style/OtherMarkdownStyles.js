@@ -57,7 +57,7 @@ export const OtherMarkdownStyles = createGlobalStyle`
     h4,
     h5,
     h6 {
-      margin-top: 15px;
+      margin-top: 25px;
       margin-bottom: 0;
       position: relative;
       font-weight: bold;
@@ -86,6 +86,8 @@ export const OtherMarkdownStyles = createGlobalStyle`
     h3 {
       line-height: 1;
       color: ${secondaryDark};
+
+
     }
     h1,
     h1 + h3 {
