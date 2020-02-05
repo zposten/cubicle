@@ -58,6 +58,7 @@ export const OtherMarkdownStyles = createGlobalStyle`
     h5,
     h6 {
       margin-top: 15px;
+      margin-bottom: 0;
       position: relative;
       font-weight: bold;
 
@@ -83,7 +84,7 @@ export const OtherMarkdownStyles = createGlobalStyle`
       }
     }
     h3 {
-      line-height: 1.43;
+      line-height: 1;
       color: ${secondaryDark};
     }
     h1,
@@ -108,6 +109,10 @@ export const OtherMarkdownStyles = createGlobalStyle`
       > :last-child {
         margin-bottom: 0;
       }
+    }
+
+    p {
+      margin: 16px 0;
     }
   }
 `
