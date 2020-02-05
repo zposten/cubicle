@@ -1,30 +1,10 @@
-import * as iosNav from './ios-nav-controller.md'
-import * as iosBreak from './ios-required-break-statements.md'
-import * as iosStatic from './ios-storing-static-data.md'
-import * as iosUiCreation from './ios-ui-creation-methods.md'
-import * as iosPopover from './ios-ui-popover-controller.md'
-import * as iosVarCopy from './ios-view-var-copy.md'
-
-import * as gitI from './git-i.md'
-import * as gitK from './git-map-to-k.md'
-import * as gitMove from './git-move.md'
-import * as gitTimePt1 from './git-time-travel-pt1.md'
+import iosPosts from './ios'
+import gitPosts from './git'
 
 export default parsePosts()
 
 function parsePosts() {
-  let posts = [
-    iosNav,
-    iosBreak,
-    iosStatic,
-    iosUiCreation,
-    iosPopover,
-    iosVarCopy,
-    gitI,
-    gitK,
-    gitMove,
-    gitTimePt1,
-  ]
+  let posts = [...iosPosts, ...gitPosts]
 
   for (let post of posts) {
     parseDate(post)
