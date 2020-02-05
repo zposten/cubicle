@@ -1,10 +1,11 @@
 import iosPosts from './ios'
 import gitPosts from './git'
+import securityPosts from './security'
 
 export default parsePosts()
 
 function parsePosts() {
-  let posts = [...iosPosts, ...gitPosts]
+  let posts = [...iosPosts, ...gitPosts, ...securityPosts]
 
   for (let post of posts) {
     parseDate(post)

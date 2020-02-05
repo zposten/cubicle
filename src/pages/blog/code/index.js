@@ -17,7 +17,7 @@ export default function BlogCode() {
 
       <BlogCardList cards={codeCards} router={router}>
         <Title
-          title="Technical Blog"
+          title="Technology Blog"
           subtitle="Knowledge sharing to myself and maybe others!"
         />
       </BlogCardList>

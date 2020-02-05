@@ -36,13 +36,9 @@ export const ListStyles = createGlobalStyle`
         counter-increment: item;
         margin-bottom: 5px;
         width: 100%;
-        display: grid;
-        grid-template-columns: 40px 1fr;
-        grid-template-areas:
-          'number primary'
-          'secondary secondary';
-        align-items: start;
-        margin-top: 20px;
+        margin-top: 15px;
+        position: relative;
+        padding-left: 2em;
 
         &::before {
           grid-area: number;
@@ -54,6 +50,9 @@ export const ListStyles = createGlobalStyle`
           width: 1.3em;
           text-align: center;
           display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 0;
         }
 
         & > p {
