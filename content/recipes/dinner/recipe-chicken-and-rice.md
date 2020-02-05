@@ -2,6 +2,7 @@
 title: Mom's Chicken and Rice
 description: You guessed it, there's chicken and there's rice, but it doesn't stop there!
 imageFilename: chicken-and-rice.jpg
+date: 2018-01-01
 id: chicken-and-rice
 ---
 

@@ -17,7 +17,7 @@ export default function BlogMeal(props) {
     <>
       <Head>{meal && <title>{title}</title>}</Head>
 
-      <BlogCardList cards={mealCards} router={props.router}>
+      <BlogCardList cards={mealCards} router={props.router} showDate={false}>
         <Title title={title} subtitle="My favorite, time-tested recipes" />
       </BlogCardList>
     </>
