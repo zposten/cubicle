@@ -4,6 +4,9 @@ import * as goulash from './recipe-goulash.md'
 import * as potRoast from './recipe-guinness-pot-roast.md'
 import * as tacoPasta from './recipe-one-pot-taco-pasta.md'
 import * as pizza from './recipe-pizza.md'
+import * as chili from './recipe-chili.md'
+import * as lasagna from './recipe-lasagna.md'
+import * as taterTotCasserole from './recipe-tater-tot-casserole.md'
 
 export const dinner = [
   bbqChicken,
@@ -12,4 +15,7 @@ export const dinner = [
   potRoast,
   tacoPasta,
   pizza,
+  chili,
+  lasagna,
+  taterTotCasserole,
 ]

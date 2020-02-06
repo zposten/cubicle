@@ -114,7 +114,7 @@ We will add the `--oneline` flag to make each commit display on only a single li
 git log --graph --oneline --decorate --all
 ```
 
-<div style="background-image: url('/static/images/git-log-screenshot.png');height: 400px;margin-bottom: 50px;background-size: contain; background-repeat: no-repeat;background-position: center;"></div>
+<div style="background-image: url('/static/images/blog/git-time-travel/git-log-screenshot.png');height: 400px;margin-bottom: 50px;background-size: contain; background-repeat: no-repeat;background-position: center;"></div>
 
 Great! This is a much more useful format of the log than what we started with. One final tweak though, I think it's useful to still display the author or each commit. In order to accomplish that, you have to specify a custom `--pretty` format. This command becomes extremely arduous to type, and I would strongly recommend that you create an alias for it
 
@@ -122,7 +122,7 @@ Great! This is a much more useful format of the log than what we started with. O
 git log --pretty=format:"%C(auto)%h%d %s %C(cyan)[%aN]" --graph --all
 ```
 
-<div style="background-image: url('/static/images/git-ls-screenshot.png');height: 400px;margin-bottom: 50px;background-size: contain; background-repeat: no-repeat;background-position: center;"></div>
+<div style="background-image: url('/static/images/blog/git-time-travel/git-ls-screenshot.png');height: 400px;margin-bottom: 50px;background-size: contain; background-repeat: no-repeat;background-position: center;"></div>
 
 This is one of many git aliases that I use. You can find the all of them [here](https://gist.github.com/zposten/4960a81addfbcdc48abfe855fae0af43).
 
