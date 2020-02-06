@@ -129,7 +129,7 @@ export function Card(props) {
 }
 
 Card.propTypes = {
-  src: PropTypes.string.isRequired,
+  src: PropTypes.string,
   backupSrc: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
