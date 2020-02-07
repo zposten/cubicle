@@ -2,7 +2,7 @@
 title: American Goulash
 description: This traditional family favorite is nothing if not comfort food
 imageFilename: goulash.jpg
-date: 2018-01-01
+date: 2016-05-20
 id: goulash
 ---
 
