@@ -1,6 +1,8 @@
 const fs = require('fs-extra')
 const path = require('path')
 
+const rootProjPath = path.join(__dirname, '..')
+
 /**
  * Generate a Next JS export path map.
  *
@@ -35,10 +37,10 @@ const path = require('path')
 module.exports = function generateBlogExportPathMap() {
   const codePostMaps = generatePathMaps({
     postIds: [
-      ...getMdFilenamesWithExt('../../content/posts'),
-      ...getMdFilenamesWithExt('../../content/posts/git'),
-      ...getMdFilenamesWithExt('../../content/posts/ios'),
-      ...getMdFilenamesWithExt('../../content/posts/security'),
+      ...getMdFilenamesWithExt('content/posts'),
+      ...getMdFilenamesWithExt('content/posts/git'),
+      ...getMdFilenamesWithExt('content/posts/ios'),
+      ...getMdFilenamesWithExt('content/posts/security'),
     ],
     browserPath: '/blog/code',
     pagePath: '/blog/code/[pid]',
@@ -77,12 +79,12 @@ function generatePathMaps({postIds, browserPath, pagePath}) {
 /**
  * Get the filenames (without extension) of every markdown file
  * in a particular directory
- * @param {string} relativePath The path from this file to
+ * @param {string} relativePath The path from the project root to
  * the directory to be read
  * @returns {string[]} An array of filenames (w/o extension)
  */
 function getMdFilenamesWithExt(relativePath) {
-  const pathToDir = path.join(__dirname, relativePath)
+  const pathToDir = path.join(rootProjPath, relativePath)
   return fs
     .readdirSync(pathToDir)
     .filter(filename => filename.endsWith('.md'))
@@ -108,7 +110,7 @@ function generateRecipePathMaps() {
     // is used to generate the links, whereas the filename is used here
     // to generate the proper static HTML pages
     const recipePostIds = getMdFilenamesWithExt(
-      `../../content/recipes/${mealName}`,
+      `content/recipes/${mealName}`,
     ).map(mapRecipeFilleNameToId)
 
     const mapToEachMealRecipe = generatePathMaps({
