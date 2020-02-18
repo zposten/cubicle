@@ -6,7 +6,7 @@
 
 const path = require('path')
 const merge = require('webpack-merge')
-const generateBlogExportPathMap = require('./src/general/generateBlogExportPathMap')
+const generateBlogExportPathMap = require('./bld/generateBlogExportPathMap')
 
 function configureWebpack(config) {
   let srcPath = path.join(__dirname, 'src')
@@ -27,7 +27,7 @@ function configureWebpack(config) {
       rules: [
         {
           test: /\.md$/,
-          loader: path.resolve(srcPath, './general/webpack-markdown-loader.js'),
+          loader: path.resolve(__dirname, './bld/webpack-markdown-loader.js'),
         },
       ],
     },

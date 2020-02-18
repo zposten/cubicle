@@ -2,8 +2,8 @@
 title: Tater Tot Casserole
 description: Crispy deliciousness
 author: Devyn Bright
-date: 2018-01-01
-imageFilename: tater-tot-casserole.jpg
+date: 2017-04-25
+imageFilename: recipes/tater-tot-casserole.jpg
 id: tater-tot-casserole
 ---
 

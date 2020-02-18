@@ -1,8 +1,8 @@
 ---
 title: Perfect Mashed Potatoes
 description: You've had mashed potatoes, but you've never had THESE mashed potatoes
-imageFilename: mashed-potatoes.jpg
-date: 2018-01-01
+imageFilename: recipes/mashed-potatoes.jpg
+date: 2018-10-02
 id: mashed-potatoes
 ---
 

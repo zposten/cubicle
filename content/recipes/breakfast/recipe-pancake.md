@@ -2,8 +2,8 @@
 title: The Ultimate Pancake
 description: A breakfast to remember until tomorrow's breakfast!
 author: Bisquick
-date: 2018-01-01
-imageFilename: pancakes.jpg
+date: 2018-03-21
+imageFilename: recipes/pancakes.jpg
 id: pancakes
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: One Pot Taco Pasta
 description: You like tacos and you like pasta, what's not to love?
-imageFilename: taco-pasta.jpg
-date: 2018-01-01
+imageFilename: recipes/taco-pasta.jpg
+date: 2016-03-04
 id: one-pot-taco-pasta
 ---
 

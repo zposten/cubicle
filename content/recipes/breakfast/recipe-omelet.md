@@ -2,8 +2,8 @@
 title: Mom's Omelets
 description: My childhood favorite
 author: Barbara Konkel
-date: 2018-01-01
-imageFilename: omelet.jpg
+date: 2014-02-03
+imageFilename: recipes/omelet.jpg
 id: omelet
 ---
 
