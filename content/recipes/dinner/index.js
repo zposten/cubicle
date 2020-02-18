@@ -7,6 +7,7 @@ import * as pizza from './recipe-pizza.md'
 import * as chili from './recipe-chili.md'
 import * as lasagna from './recipe-lasagna.md'
 import * as taterTotCasserole from './recipe-tater-tot-casserole.md'
+import * as burgers from './recipe-burgers.md'
 
 export const dinner = [
   bbqChicken,
@@ -18,4 +19,5 @@ export const dinner = [
   chili,
   lasagna,
   taterTotCasserole,
+  burgers,
 ]

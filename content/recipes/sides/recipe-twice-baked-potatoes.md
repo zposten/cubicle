@@ -1,7 +1,7 @@
 ---
 title: Twice Baked Potatoes
 description: mmm bacon
-imageFilename: twice-baked-potatoes.jpg
+imageFilename: recipes/twice-baked-potatoes.jpg
 date: 2018-08-26
 id: twice-baked-potatoes
 ---

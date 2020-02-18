@@ -3,7 +3,7 @@ title: Betty Crocker Lasagna
 description: Stolen from Jon, who stole it from Betty
 author: Betty Crocker
 date: 2016-07-11
-imageFilename: lasagna.jpg
+imageFilename: recipes/lasagna.jpg
 id: lasagna
 ---
 

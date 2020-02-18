@@ -1,7 +1,7 @@
 ---
 title: Crockpot BBQ chicken
 description: The easiest BBQ chicken you've ever made!
-imageFilename: bbq-chicken.jpg
+imageFilename: recipes/bbq-chicken.jpg
 date: 2017-01-07
 id: bbq-chicken
 ---

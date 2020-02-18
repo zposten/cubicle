@@ -3,7 +3,7 @@ title: Johnny's Homemade Pizza
 description: It's hard to believe that this guy can cook, until you try his pizza
 author: Jon Braaten
 date: 2015-10-15
-imageFilename: pizza.jpg
+imageFilename: recipes/pizza.jpg
 id: pizza
 ---
 

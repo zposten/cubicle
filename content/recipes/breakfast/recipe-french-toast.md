@@ -1,7 +1,7 @@
 ---
 title: Scotty's French Toast
 description: Back in 711, this was a Sunday of finals week tradition
-imageFilename: french-toast.jpg
+imageFilename: recipes/french-toast.jpg
 date: 2014-11-19
 id: french-toast
 ---

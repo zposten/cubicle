@@ -1,7 +1,7 @@
 ---
 title: Mom's Chicken and Rice
 description: My take on my mom's classic
-imageFilename: chicken-and-rice.jpg
+imageFilename: recipes/chicken-and-rice.jpg
 date: 2016-04-17
 id: chicken-and-rice
 ---

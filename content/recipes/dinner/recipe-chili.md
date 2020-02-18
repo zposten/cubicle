@@ -3,7 +3,7 @@ title: Real Chili
 description: My version of Milwaukee Real Chili
 author: Zach Posten
 date: 2018-07-18
-imageFilename: chili.jpg
+imageFilename: recipes/chili.jpg
 id: chili
 ---
 
