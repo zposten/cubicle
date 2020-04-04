@@ -6,7 +6,6 @@
 
 const path = require('path')
 const merge = require('webpack-merge')
-const generateBlogExportPathMap = require('./bld/generateBlogExportPathMap')
 
 function configureWebpack(config) {
   let srcPath = path.join(__dirname, 'src')
@@ -34,17 +33,7 @@ function configureWebpack(config) {
   })
 }
 
-async function exportPathMap(
-  defaultPathMap,
-  {dev, dir, outDir, distDir, buildId},
-) {
-  return {
-    ...defaultPathMap,
-    ...generateBlogExportPathMap(),
-  }
-}
-
-let nextConfig = {webpack: configureWebpack, exportPathMap}
+let nextConfig = {webpack: configureWebpack}
 
 ///////////////////////////////////////
 // NEXT PLUGINS
