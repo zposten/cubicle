@@ -34,17 +34,7 @@ function configureWebpack(config) {
   })
 }
 
-async function exportPathMap(
-  defaultPathMap,
-  {dev, dir, outDir, distDir, buildId},
-) {
-  return {
-    ...defaultPathMap,
-    ...generateBlogExportPathMap(),
-  }
-}
-
-let nextConfig = {webpack: configureWebpack, exportPathMap}
+let nextConfig = {webpack: configureWebpack}
 
 ///////////////////////////////////////
 // NEXT PLUGINS

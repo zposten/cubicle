@@ -12,7 +12,7 @@ export const ListStyles = createGlobalStyle`
       padding-inline-start: 0;
 
       ${breakpoint('sm')`
-        padding: 0 0 0 2em;
+        padding: 0 0 0 1em;
       `}
     }
 
