@@ -44,7 +44,7 @@ function parseDate(md) {
   let [date, time] = md.date.split('T')
   let [year, month, day] = date.split('-')
 
-  md.dateObject = new Date(year, month, day)
+  md.dateYearMonthDay = [year, month, day]
   md.dateString = `${monthStrs[month - 1]} ${day}, ${year}`
 }
 
