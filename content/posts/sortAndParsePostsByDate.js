@@ -13,9 +13,10 @@ export function sortAndParsePostsByDate(posts) {
   }
 
   posts.sort(function(md1, md2) {
-    let date1 = md1.dateObject
-    let date2 = md2.dateObject
+    let date1 = new Date(...md1.dateYearMonthDay)
+    let date2 = new Date(...md2.dateYearMonthDay)
 
+    // Note: this is a descending order sort
     if (date1 < date2) return +1
     if (date1 > date2) return -1
     return 0
@@ -44,7 +45,7 @@ function parseDate(md) {
   let [date, time] = md.date.split('T')
   let [year, month, day] = date.split('-')
 
-  md.dateObject = new Date(year, month, day)
+  md.dateYearMonthDay = [year, month, day]
   md.dateString = `${monthStrs[month - 1]} ${day}, ${year}`
 }
 
