@@ -5,10 +5,14 @@ import {primary, secondary} from '../../../general/theme'
 
 export const ListStyles = createGlobalStyle`
   .markdown {
-    & ul,
-    & ol {
+    ul {
+      margin-left: 32px;
+    }
+
+    ul,
+    ol {
       margin-top: 0;
-      margin-bottom: 0;
+      margin-bottom: 16px;
       padding-inline-start: 0;
 
       ${breakpoint('sm')`
@@ -16,23 +20,23 @@ export const ListStyles = createGlobalStyle`
       `}
     }
 
-    & ul {
-      & li {
+    ul {
+      li {
         list-style-type: disc;
         margin-bottom: 20px;
       }
 
-      & ul li {
+      ul li {
         list-style-type: circle;
       }
     }
 
     /* This entire block is to style the ordered list numbers */
-    & ol {
+    ol {
       list-style: none;
       counter-reset: item;
 
-      & > li {
+      > li {
         counter-increment: item;
         margin-bottom: 5px;
         width: 100%;
@@ -55,54 +59,57 @@ export const ListStyles = createGlobalStyle`
           left: 0;
         }
 
-        & > p {
+        > p {
           width: 100%;
           flex-grow: 1;
           grid-area: primary;
           margin-top: 0;
         }
 
+        /* Lists nested inside of ordered lists */
         ul,
         ol {
           grid-area: secondary;
           margin-left: 30px;
           margin-top: 20px;
+
+          ${breakpoint('sm')`
+            margin-left: 10px;
+          `}
         }
       }
     }
 
-    & ol ol,
-    & ul ol {
+    /* Doubly nested ordered lists style */
+    ol ol,
+    ul ol {
       list-style-type: lower-roman;
     }
-    & ul ol ol,
-    & ul ul ol,
-    & ol ul ol,
-    & ol ol ol {
+
+    /* Thrice nested ordered lists style */
+    ul ol ol,
+    ul ul ol,
+    ol ul ol,
+    ol ol ol {
       list-style-type: lower-alpha;
     }
 
-    & ul ul,
-    & ul ol,
-    & ol ol,
-    & ol ul {
+    /* Lists nested inside of unordered lists */
+    ul ul,
+    ul ol {
       margin-top: 0;
       margin-bottom: 0;
-      padding-left: 2em;
       padding-inline-start: 40px;
     }
 
-    & li > p {
+    li > p {
       margin-top: 16px;
       margin-bottom: 0;
     }
 
-    & p,
-    & blockquote,
-    & ul,
-    & ol,
-    & dl,
-    & table {
+    p,
+    blockquote,
+    table {
       margin-top: 0;
       margin-bottom: 16px;
     }
