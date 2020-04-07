@@ -109,10 +109,10 @@ To add a site to your password manager, make sure you have its browser extension
 3. LastPass will ask you if you want it to remember the site in question, choose yes
 4. Click on the browser extension icon and choose "Generate secure password"
    <div style="background-image: url('/static/images/blog/pass-manager/lastpass-generate-pass.png');height: 400px;width: 100%;margin-bottom: 50px;background-size: contain; background-repeat: no-repeat;background-position: center;"></div>
-5. Make sure you have a length of "20", "All characters", and all 4 checkboxes selected.
+5. Make sure you have a length of at least 20 characters, "All characters" selected, and all 4 checkboxes checked.
    <div style="background-image: url('/static/images/blog/pass-manager/lastpass-gen-options.png');height: 400px;margin-bottom: 50px;background-size: contain; background-repeat: no-repeat;background-position: center;"></div>
-6. Then copy the generated password (highlight the text, right click, choose "Copy").
-   - When you're first getting started, it may be helpful to paste the password somewhere (e.g. Notepad) just temporarily to make sure you don't lose it.
+6. Then copy the generated password (you can click the multiple squares icon to the right of the password).
+   - When you're first getting started, it may be helpful to paste the password somewhere (e.g. Notepad) just temporarily to make sure you don't lose it (make sure you close that file without saving though!).
 7. Use the change password feature of the website to change your password.
    - Use LastPass' autofill feature to fill your current password by clicking the little box that appears in the text field
    - Paste (right click, choose "Paste") the random password you generated into the new password field
