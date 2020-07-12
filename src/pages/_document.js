@@ -34,6 +34,12 @@ export default class MyDocument extends Document {
       <html>
         {/* Step 5: Output the styles in the head  */}
         <Head>
+          {/* Global site tag (gtag.js) - Google Analytics*/}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-172430847-1"
+          />
+
           {this.props.styleTags}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link

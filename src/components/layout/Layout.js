@@ -16,6 +16,14 @@ export class Layout extends React.Component {
 
   componentDidMount() {
     loadFonts()
+    this.runGoogleAnalytics()
+  }
+
+  runGoogleAnalytics() {
+    window.dataLayer = window.dataLayer || []
+    const gtag = () => dataLayer.push(arguments)
+    gtag('js', new Date())
+    gtag('config', 'UA-172430847-1')
   }
 }
 
