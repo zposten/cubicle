@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import {secondary} from 'general/theme'
+import {secondary} from '@/general/theme'
 import {TextColumn} from './TextColumn'
 
 const Wrapper = styled.div`

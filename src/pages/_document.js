@@ -2,8 +2,8 @@ import React from 'react'
 import Document, {Main, Head, NextScript} from 'next/document'
 import {ServerStyleSheet} from 'styled-components'
 
-import {CssFontSizes} from 'general/cssFontSizes'
-import {GlobalStyles} from 'general/globalStyles'
+import {CssFontSizes} from '@/general/cssFontSizes'
+import {GlobalStyles} from '@/general/globalStyles'
 
 export default class MyDocument extends Document {
   static getInitialProps({renderPage}) {

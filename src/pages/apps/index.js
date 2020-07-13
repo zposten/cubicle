@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 
-import {PageLayout} from 'components/layout'
-import {Card, CardColumn, Title} from 'components'
+import {PageLayout} from '@/components/layout'
+import {Card, CardColumn, Title} from '@/components'
 
 export default function Apps(props) {
   return (
@@ -13,14 +13,14 @@ export default function Apps(props) {
       <Title title="Apps" subtitle="Fun little bits of code" />
       <CardColumn>
         {/* <Card
-            src={require('static/images/calendar.jpg')}
+            src={require('public/static/images/calendar.jpg')}
             title="Scheduler"
             id="scheduler"
             description={`A tool for any student at any university 
               to assist with choosing a class schedule`}
           /> */}
         <Card
-          src={require('static/images/jeopardy.jpg')}
+          src={require('public/static/images/jeopardy.jpg')}
           title="Jeopardy Calculator"
           id="jeopardy"
           description={`A tool for keeping track of your score 
@@ -28,7 +28,7 @@ export default function Apps(props) {
         />
         {global.window && global.window.isCool && (
           <Card
-            src={require('static/images/mainframe.jpg')}
+            src={require('public/static/images/mainframe.jpg')}
             title="Google Mainframe Access"
             id="google"
             description={`Access to a portion of Google's 

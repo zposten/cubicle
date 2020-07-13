@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import {primaryDark} from 'general/theme'
+import {primaryDark} from '@/general/theme'
 import {TitleBlock} from './TitleBlock'
 
 const Wrapper = styled.div`
@@ -62,6 +62,6 @@ export const MiniProfile = () => (
         dedicated to finding effective solutions to complex problems.
       </BioText>
     </Bio>
-    <ProfilePic src={require('static/images/zach.jpg')} />
+    <ProfilePic src={require('public/static/images/zach.jpg')} />
   </Wrapper>
 )

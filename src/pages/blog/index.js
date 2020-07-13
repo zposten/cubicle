@@ -2,9 +2,9 @@ import React from 'react'
 import {useRouter} from 'next/router'
 import Head from 'next/head'
 
-import {PageLayout} from 'components/layout'
-import {Title, Card, CardColumn} from 'components'
-import {handleCardClick} from 'sections/blog'
+import {PageLayout} from '@/components/layout'
+import {Title, Card, CardColumn} from '@/components'
+import {handleCardClick} from '@/sections/blog'
 
 export default function Blog() {
   const router = useRouter()
@@ -18,13 +18,13 @@ export default function Blog() {
       <CardColumn>
         <Card
           title="Technology"
-          src={require('static/images/code.png')}
+          src={require('public/static/images/code.png')}
           description="Things I've learned while coding away"
           onClick={() => handleCardClick(router, 'code')}
         />
         <Card
           title="Recipes"
-          src={require('static/images/ingredients.jpg')}
+          src={require('public/static/images/ingredients.jpg')}
           description="Delicious concoctions that I hav personally vetted"
           onClick={() => handleCardClick(router, 'food')}
         />

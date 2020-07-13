@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import posts from 'content/posts'
-import {BlogPost} from 'sections/blog'
+import {BlogPost} from '@/sections/blog'
 
 export default function BlogCodePost({post}) {
   return (

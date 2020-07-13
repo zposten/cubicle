@@ -4,7 +4,7 @@ import breakpoint from 'styled-components-breakpoint'
 import Photoswipe from '@zposten/photoswipe-react'
 
 import {TitleBlock} from './TitleBlock'
-import {primaryDark} from 'general/theme'
+import {primaryDark} from '@/general/theme'
 import slides from 'content/photography/slides-featured'
 
 const Wrapper = styled.div`

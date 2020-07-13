@@ -6,7 +6,7 @@ import {lighten} from 'polished'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import {useRouter} from 'next/router'
 
-import {primary} from 'general/theme'
+import {primary} from '@/general/theme'
 
 const MyButtonBase = styled(ButtonBase)`
   font-size: inherit;

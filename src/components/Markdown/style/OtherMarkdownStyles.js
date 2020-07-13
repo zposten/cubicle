@@ -1,5 +1,5 @@
 import {createGlobalStyle} from 'styled-components'
-import {secondaryDark} from 'general/theme'
+import {secondaryDark} from '@/general/theme'
 
 export const OtherMarkdownStyles = createGlobalStyle`
   .markdown {

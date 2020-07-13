@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {ThemeProvider} from 'styled-components'
+import ReactGA from 'react-ga'
 
-import {theme} from 'general/theme'
-import {loadFonts} from 'general/fonts'
+import {theme} from '@/general/theme'
 
 export class Layout extends React.Component {
   render() {
@@ -15,7 +15,7 @@ export class Layout extends React.Component {
   }
 
   componentDidMount() {
-    loadFonts()
+    ReactGA.pageview(window.location.pathname + window.location.search)
   }
 }
 

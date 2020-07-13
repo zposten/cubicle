@@ -4,7 +4,7 @@ import breakpoint from 'styled-components-breakpoint'
 
 import {ProjectSummary} from './ProjectSummary'
 import {TitleBlock} from '../TitleBlock'
-import {Button} from 'components'
+import {Button} from '@/components'
 
 const Wrapper = styled.div`
   margin: 20px;
@@ -40,7 +40,7 @@ export const ProjectDisplay = () => (
     <TitleBlock>Work I've done</TitleBlock>
     <Summaries>
       <ProjectSummary
-        src={require('static/images/glas.jpg')}
+        src={require('public/static/images/glas.jpg')}
         title="GLAS by Johnson Controls"
         description={`
       I worked on developing the user interface, defining the architecture, 
@@ -49,7 +49,7 @@ export const ProjectDisplay = () => (
     `}
       />
       <ProjectSummary
-        src={require('static/images/nurse.png')}
+        src={require('public/static/images/nurse.png')}
         title="Nurse Management System for Eversana"
         description={`
       I developed the front end of a nurse management system that allows coordinators 
@@ -59,7 +59,7 @@ export const ProjectDisplay = () => (
     `}
       />
       <ProjectSummary
-        src={require('static/images/github.svg')}
+        src={require('public/static/images/github.svg')}
         invert={true}
         title="Open source contributions"
         description={

@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import {BlogPost} from 'sections/blog'
+import {BlogPost} from '@/sections/blog'
 import * as recipesByMeal from 'content/recipes'
 
 export default function BlogRecipe({recipe}) {

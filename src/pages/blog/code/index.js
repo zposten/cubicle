@@ -2,9 +2,9 @@ import React from 'react'
 import {useRouter} from 'next/router'
 import Head from 'next/head'
 
-import {Title} from 'components'
+import {Title} from '@/components'
 import cards from 'content/cards'
-import {BlogCardList} from 'sections/blog'
+import {BlogCardList} from '@/sections/blog'
 
 export default function BlogCode() {
   const router = useRouter()

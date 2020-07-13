@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {useRouter} from 'next/router'
 
-import {Card, CardColumn} from 'components'
-import {PageLayout} from 'components/layout'
+import {Card, CardColumn} from '@/components'
+import {PageLayout} from '@/components/layout'
 
 export function BlogCardList(props) {
   const router = useRouter()
@@ -16,9 +16,10 @@ export function BlogCardList(props) {
             <Card
               key={c.id}
               src={
-                c.imageFilename && require(`static/images/${c.imageFilename}`)
+                c.imageFilename &&
+                require(`public/static/images/${c.imageFilename}`)
               }
-              backupSrc={require('static/images/code.png')}
+              backupSrc={require('public/static/images/code.png')}
               title={c.title}
               description={c.description}
               onClick={() => handleCardClick(router, c.id)}

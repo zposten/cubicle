@@ -12,16 +12,6 @@ function configureWebpack(config) {
 
   // prettier-ignore
   return merge(config, {
-    resolve: {
-      alias: {
-        content:    path.join(__dirname, 'content'),
-        static:     path.join(__dirname, 'public', 'static'),
-        components: path.join(srcPath, 'components'),
-        general:    path.join(srcPath, 'general'),
-        pages:      path.join(srcPath, 'pages'),
-        sections:   path.join(srcPath, 'sections'),
-      },
-    },
     module: {
       rules: [
         {
@@ -47,11 +37,11 @@ module.exports = withPlugins(
     [
       optimizedImages,
       {
-        /* config for next-optimized-images */
+        // Config for next-optimized-images
       },
     ],
 
-    // your other plugins here
+    // Other plugins here
   ],
   nextConfig,
 )
