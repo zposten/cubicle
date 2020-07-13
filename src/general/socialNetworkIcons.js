@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {secondary} from 'general/theme'
+import {secondary} from '@/general/theme'
 
 const Icon = styled.svg`
   width: ${props => props.width || props.size || 40}px;
@@ -20,33 +20,32 @@ const Icon = styled.svg`
     fill: ${secondary};
     background: white;
     transition: all 0.5s;
-    box-shadow: 
-      0 0 10px #fff, 
-      0 0 20px #fff,
-      0 0 30px #fff,
-      0 0 40px ${secondary},
-      0 0 70px ${secondary},
-      0 0 80px ${secondary},
-      0 0 100px ${secondary},
-      0 0 150px ${secondary};
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff,
+      0 0 40px ${secondary}, 0 0 70px ${secondary}, 0 0 80px ${secondary},
+      0 0 100px ${secondary}, 0 0 150px ${secondary};
   }
 
   @keyframes grow {
-    from {transform: scale(1)}
-    to {transform: scale(1.2)}
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
   }
 
   @keyframes shrink {
-    from {transform: scale(1.2)}
-    to {transform: scale(1)}
+    from {
+      transform: scale(1.2);
+    }
+    to {
+      transform: scale(1);
+    }
   }
 `
 
-export const GithubIcon = (props) => (
-  <Icon
-    viewBox='0 0 24 24'
-    {...props}
-  >
+export const GithubIcon = props => (
+  <Icon viewBox="0 0 24 24" {...props}>
     {/* <path
       d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58
       9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,
@@ -74,12 +73,8 @@ export const GithubIcon = (props) => (
   </Icon>
 )
 
-export const TwitterIcon = (props) => (
-  <Icon
-    viewBox='0 0 24 24'
-    size={45}
-    {...props}
-  >
+export const TwitterIcon = props => (
+  <Icon viewBox="0 0 24 24" size={45} {...props}>
     <path
       d="M17.71,9.33C18.19,8.93 18.75,8.45 19,7.92C18.59,8.13 18.1,8.26
       17.56,8.33C18.06,7.97 18.47,7.5 18.68,6.86C18.16,7.14 17.63,7.38 16.97,
@@ -104,17 +99,13 @@ export const TwitterIcon = (props) => (
   </Icon>
 )
 
-export const LinkedInIcon = (props) => (
-  <Icon
-    viewBox='0 0 24 24'
-    {...props}
-  >
+export const LinkedInIcon = props => (
+  <Icon viewBox="0 0 24 24" {...props}>
     <path
       d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966
       0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75
       1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586
       7-2.777 7 2.476v6.759z"
     />
-
   </Icon>
 )

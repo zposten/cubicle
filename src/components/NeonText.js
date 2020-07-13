@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components'
-import {secondary} from 'general/theme'
+import {secondary} from '@/general/theme'
 
 // prettier-ignore
 const startShadow = css`

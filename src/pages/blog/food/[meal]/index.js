@@ -1,9 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 
-import {Title} from 'components'
-import {BlogCardList} from 'sections/blog'
-import {capitalize} from 'general/util'
+import {Title} from '@/components'
+import {BlogCardList} from '@/sections/blog'
+import {capitalize} from '@/general/util'
 import * as recipesByMeal from 'content/recipes'
 
 export default function BlogMeal({meal, title}) {

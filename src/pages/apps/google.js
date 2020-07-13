@@ -3,10 +3,10 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import {PacmanLoader} from 'react-spinners'
 
-import {PageLayout} from 'components/layout'
-import {Title, Button, Textbox, Column} from 'components'
-import {useQuestionMask} from 'sections/apps/google'
-import {secondary} from 'general/theme'
+import {PageLayout} from '@/components/layout'
+import {Title, Button, Textbox, Column} from '@/components'
+import {useQuestionMask} from '@/sections/apps/google'
+import {secondary} from '@/general/theme'
 
 const Wrapper = styled.div`
   display: flex;

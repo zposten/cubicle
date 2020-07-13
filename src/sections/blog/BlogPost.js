@@ -3,20 +3,20 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
-import {Title} from 'components'
-import {PageLayout} from 'components/layout'
-import {Markdown} from 'components/Markdown'
+import {Title} from '@/components'
+import {PageLayout} from '@/components/layout'
+import {Markdown} from '@/components/Markdown'
 
 function getImage(imageName) {
   if (imageName) {
     try {
-      return require(`static/images/${imageName}`)
+      return require(`public/static/images/${imageName}`)
     } catch {
       // If the image path is invalid, just use the default image below
     }
   }
 
-  return require('static/images/code.png')
+  return require('public/static/images/code.png')
 }
 
 const BlogImage = styled.div`

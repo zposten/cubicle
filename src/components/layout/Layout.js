@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {ThemeProvider} from 'styled-components'
 import ReactGA from 'react-ga'
 
-import {theme} from 'general/theme'
+import {theme} from '@/general/theme'
 
 export class Layout extends React.Component {
   render() {

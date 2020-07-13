@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 import {Layout} from './'
-import {Navigation} from 'components'
+import {Navigation} from '@/components'
 
 const Wrapper = styled.div`
   position: relative;
@@ -39,7 +39,7 @@ const LittleCubes = styled.img`
 export function PageLayout(props) {
   return (
     <Layout>
-      <LittleCubes src={require('static/images/little-cubes.png')} />
+      <LittleCubes src={require('public/static/images/little-cubes.png')} />
       <Navigation />
       <Wrapper>{props.children}</Wrapper>
     </Layout>
