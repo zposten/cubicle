@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {ThemeProvider} from 'styled-components'
+import ReactGA from 'react-ga'
 
 import {theme} from 'general/theme'
-import {loadFonts} from 'general/fonts'
 
 export class Layout extends React.Component {
   render() {
@@ -15,15 +15,7 @@ export class Layout extends React.Component {
   }
 
   componentDidMount() {
-    loadFonts()
-    this.runGoogleAnalytics()
-  }
-
-  runGoogleAnalytics() {
-    window.dataLayer = window.dataLayer || []
-    const gtag = () => dataLayer.push(arguments)
-    gtag('js', new Date())
-    gtag('config', 'UA-172430847-1')
+    ReactGA.pageview(window.location.pathname + window.location.search)
   }
 }
 
