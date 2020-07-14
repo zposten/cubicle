@@ -39,13 +39,17 @@ const BlogImage = styled.div`
 `
 
 export function BlogPost(props) {
-  let {post} = props
+  let {post, showDate} = props
 
   return (
     <PageLayout>
       {post && (
         <>
-          <Title title={post.title} subtitle={post.description} />
+          <Title
+            title={post.title}
+            subtitle={post.description}
+            date={showDate && post.dateString}
+          />
           <BlogImage src={post.imageFilename} />
           <Markdown html={post.html} />
         </>
@@ -61,5 +65,6 @@ BlogPost.propTypes = {
     imageFilename: PropTypes.string,
     id: PropTypes.string,
     html: PropTypes.string,
+    showDate: PropTypes.bool,
   }),
 }

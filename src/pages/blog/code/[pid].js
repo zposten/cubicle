@@ -8,7 +8,7 @@ export default function BlogCodePost({post}) {
   return (
     <>
       <Head>{post && <title>{post.title}</title>}</Head>
-      <BlogPost post={post} />
+      <BlogPost post={post} showDate={true} />
     </>
   )
 }

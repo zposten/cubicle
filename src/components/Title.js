@@ -27,11 +27,24 @@ const SmallText = styled.h4`
   font-weight: 300;
 `
 
+const Date = styled.div`
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+  opacity: 0.6;
+  width: 100%;
+  padding: 10px 0;
+`
+
 export function Title(props) {
+  const {title, subtitle, date} = props
+
   return (
     <Wrapper>
-      <BigText>{props.title}</BigText>
-      <SmallText>{props.subtitle}</SmallText>
+      <BigText>{title}</BigText>
+      {date && <Date>{date}</Date>}
+      <SmallText>{subtitle}</SmallText>
     </Wrapper>
   )
 }
@@ -39,4 +52,5 @@ export function Title(props) {
 Title.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
+  date: PropTypes.string,
 }
