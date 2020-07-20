@@ -61,7 +61,7 @@ The context is basically just an object jam-packed with everything that Microsof
 
 For example you can call `context.log()` to write trace output to the console. You can also call `context.log.warn()`, `context.log.error()` and `context.log.verbose()`.
 
-The context is also where you'll access the bindings you've configured via `context.bindings`. HTTP request triggers and HTTP response outputs are so common, that in addition to being able to access theme via `context.bindings.req` and `context.bindings.res` respectively, they also exist directly on the context object as `context.res` and `context.res`. That's in addition to the `req` being injected as the second argument to your function. They give you plenty of rope to hang yourself with here, but just pick your favorite and be consistent.
+The context is also where you'll access the bindings you've configured via `context.bindings`. HTTP request triggers and HTTP response outputs are so common, that in addition to being able to access theme via `context.bindings.req` and `context.bindings.res` respectively, they also exist directly on the context object as `context.req` and `context.res`. That's in addition to the `req` being injected as the second argument to your function. They give you plenty of rope to hang yourself with here, but just pick your favorite and be consistent.
 
 #### Outputs
 
@@ -71,7 +71,7 @@ When the Microsoft documentation [talks about outputs](https://docs.microsoft.co
 
 A binding is basically a way of interacting with some other system that Microsoft has baked into the Azure function for you. But because you have access to NPM packages (I talk about how to install them below), you're not limited to just those bindings.
 
-For example, Microsoft does [not currently support](https://github.com/Azure/azure-functions-python-worker/issues/413) binding to a Cosmos DB using the Gremlin API. To do this, I had to make use of the [gremlin](https://www.npmjs.com/package/gremlin) NPM package.
+For example, Microsoft does [not currently support](https://github.com/Azure/azure-functions-python-worker/issues/413) binding to a Cosmos DB using the Gremlin API. To do this, I had to make use of the [gremlin NPM package](https://www.npmjs.com/package/gremlin).
 
 ### Where to start
 
@@ -125,4 +125,4 @@ On the whole, I found Microsoft's documentation around Azure Functions rather co
 
 The piece of documentation that helped me the most though (and the one that I linked to several times in this post) was definitely their [Azure Functions JavaScript developer guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node#dependency-management). It explains the nitty-gritty details of a lot of what I talked about in this post, and is a good place to reference when you're trying to do something specific that's not working.
 
-If you're looking for more information on how to work with the Gremlin API of a Cosmos DB, I should have another post about that specifically coming soon!
+If you're looking for more information on how to work with the Gremlin API of Cosmos DB, please take a look at my next blog post in this series; [How to Manipulate a Gremlin Cosmos DB From Inside a Node.js Azure Function](https://www.posten.io/blog/code/azure-functions-gremlin).
